@@ -24,7 +24,7 @@ SUITE = $(KERNELS) converter
 all: $(SUITE)
 
 % : src/%_linked.ll
-	cd $*; $(CXX) -L/usr/lib/llvm-12/lib/ $(CXX_FLAGS) ../$< -o $@
+	cd $*; $(CXX) -L/usr/lib/llvm-15/lib/ $(CXX_FLAGS) ../$< -o $@
 
 src/%_linked.ll : src/%_optimized.ll $(ZRAY_BIN_PATH)/tool_dyn.ll
 	$(CUSTOM_LINK) $^ -S -o $@

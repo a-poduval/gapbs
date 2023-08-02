@@ -51,6 +51,7 @@ typedef double CountT;
 void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
     Bitmap &succ, vector<SlidingQueue<NodeID>::iterator> &depth_index,
     SlidingQueue<NodeID> &queue) {
+#pragma begin_instrument 1
   pvector<NodeID> depths(g.num_nodes(), -1);
   depths[source] = 0;
   path_counts[source] = 1;
@@ -89,6 +90,7 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
     }
   }
   depth_index.push_back(queue.begin());
+#pragma end_instrument 1
 }
 
 

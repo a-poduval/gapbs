@@ -35,7 +35,7 @@ class CLBase {
 
   int scale_ = -1;
   int degree_ = 16;
-  std::string filename_ = "";
+  std::string filename_ = "/home/ashwin/projects/gapbs/benchmark/Graphs/twitterU.sg";
   bool symmetrize_ = false;
   bool uniform_ = false;
   bool in_place_ = false;
@@ -113,7 +113,7 @@ class CLBase {
 
 class CLApp : public CLBase {
   bool do_analysis_ = false;
-  int num_trials_ = 16;
+  int num_trials_ = 1;
   int64_t start_vertex_ = -1;
   bool do_verify_ = false;
 

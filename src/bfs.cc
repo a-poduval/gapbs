@@ -45,6 +45,7 @@ using namespace std;
 
 int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
                Bitmap &next) {
+#pragma begin_instrument 1
   int64_t awake_count = 0;
   next.reset();
   #pragma omp parallel for reduction(+ : awake_count) schedule(dynamic, 1024)
@@ -60,6 +61,7 @@ int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
       }
     }
   }
+#pragma end_instrument 1
   return awake_count;
 }
 

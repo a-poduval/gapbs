@@ -48,9 +48,10 @@ using namespace std;
 // direction, so we use a min-max swap such that lower component IDs propagate
 // independent of the edge's direction.
 pvector<NodeID> ShiloachVishkin(const Graph &g) {
-#pragma begin_instrument 1
+//   custom_roi_begin("ShiloachVishkin"); 
+// // #pragma begin_instrument 1
   pvector<NodeID> comp(g.num_nodes());
-  #pragma omp parallel for
+  ////#pragma omp parallel for
   for (NodeID n=0; n < g.num_nodes(); n++)
     comp[n] = n;
   bool change = true;
@@ -58,12 +59,18 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
   while (change) {
     change = false;
     num_iter++;
-    #pragma omp parallel for
+    ////#pragma omp parallel for
     for (NodeID u=0; u < g.num_nodes(); u++) {
       for (NodeID v : g.out_neigh(u)) {
+// #pragma begin_instrument 1
+  custom_roi_begin("ShiloachVishkin1"); 
         NodeID comp_u = comp[u];
         NodeID comp_v = comp[v];
+  custom_roi_end("ShiloachVishkin1");
+// #pragma end_instrument 1
         if (comp_u == comp_v) continue;
+// #pragma begin_instrument 2
+  custom_roi_begin("ShiloachVishkin2"); 
         // Hooking condition so lower component ID wins independent of direction
         NodeID high_comp = comp_u > comp_v ? comp_u : comp_v;
         NodeID low_comp = comp_u + (comp_v - high_comp);
@@ -71,9 +78,11 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
           change = true;
           comp[high_comp] = low_comp;
         }
+  custom_roi_end("ShiloachVishkin2");
+// #pragma end_instrument 2
       }
     }
-    #pragma omp parallel for
+    ////#pragma omp parallel for
     for (NodeID n=0; n < g.num_nodes(); n++) {
       while (comp[n] != comp[comp[n]]) {
         comp[n] = comp[comp[n]];
@@ -81,7 +90,8 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
     }
   }
   cout << "Shiloach-Vishkin took " << num_iter << " iterations" << endl;
-#pragma end_instrument 1
+// // #pragma end_instrument 1
+//   custom_roi_end("ShiloachVishkin");
   return comp;
 }
 

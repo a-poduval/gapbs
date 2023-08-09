@@ -23,15 +23,16 @@ SUITE = $(KERNELS) converter
 .PHONY: all
 all: $(SUITE)
 
-% : src/%_linked.ll
+% : src/%_optimized.ll
 	cd $*; $(CXX) -L/usr/lib/llvm-15/lib/ -L$(PIN_ROI_DIR) $(CXX_FLAGS) ../$< -lpinroi-cc -o $@
 
-src/%_linked.ll : src/%_optimized.ll $(ZRAY_BIN_PATH)/tool_dyn.ll
-	$(CUSTOM_LINK) $^ -S -o $@
+#src/%_linked.ll : src/%_optimized.ll $(ZRAY_BIN_PATH)/tool_dyn.ll
+	#$(CUSTOM_LINK) $^ -S -o $@
 
 src/%_optimized.ll : src/%.ll
-	#mkdir $*
-	cd $*; $(CUSTOM_OPT) -enable-new-pm=0 -O2 -mem2reg -load $(ZRAY_BIN_PATH)/tool.so -tool_pass ../$< -o ../$@
+	mkdir -p $*
+	cd $*; $(CUSTOM_OPT) -enable-new-pm=0 -O2 -mem2reg ../$< -o ../$@
+	#cd $*; $(CUSTOM_OPT) -enable-new-pm=0 -O2 -mem2reg -load $(ZRAY_BIN_PATH)/tool.so -tool_pass ../$< -o ../$@
 
 src/%.ll : src/%.cc src/*.h
 	$(CXX) $(CXX_FLAGS) -I$(PIN_ROI_DIR) -S -emit-llvm $< -o $@

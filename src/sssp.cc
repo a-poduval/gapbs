@@ -69,7 +69,6 @@ inline
 void RelaxEdges(const WGraph &g, NodeID u, WeightT delta,
                 pvector<WeightT> &dist, vector <vector<NodeID>> &local_bins) {
   custom_roi_begin("RelaxEdges"); 
-// #pragma begin_instrument 1
   for (WNode wn : g.out_neigh(u)) {
     WeightT old_dist = dist[wn.v];
     WeightT new_dist = dist[u] + wn.w;
@@ -84,7 +83,6 @@ void RelaxEdges(const WGraph &g, NodeID u, WeightT delta,
       old_dist = dist[wn.v];      // swap failed, recheck dist update & retry
     }
   }
-// #pragma end_instrument 1
   custom_roi_end("RelaxEdges");
 }
 

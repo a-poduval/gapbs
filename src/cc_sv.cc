@@ -50,7 +50,7 @@ using namespace std;
 pvector<NodeID> ShiloachVishkin(const Graph &g) {
 #pragma begin_instrument 1
   pvector<NodeID> comp(g.num_nodes());
-  #pragma omp parallel for
+  // #pragma omp parallel for
   for (NodeID n=0; n < g.num_nodes(); n++)
     comp[n] = n;
   bool change = true;
@@ -58,7 +58,7 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
   while (change) {
     change = false;
     num_iter++;
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (NodeID u=0; u < g.num_nodes(); u++) {
       for (NodeID v : g.out_neigh(u)) {
         NodeID comp_u = comp[u];
@@ -73,7 +73,7 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
         }
       }
     }
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (NodeID n=0; n < g.num_nodes(); n++) {
       while (comp[n] != comp[comp[n]]) {
         comp[n] = comp[comp[n]];

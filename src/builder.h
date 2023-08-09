@@ -68,7 +68,7 @@ class BuilderBase {
 
   NodeID_ FindMaxNodeID(const EdgeList &el) {
     NodeID_ max_seen = 0;
-    #pragma omp parallel for reduction(max : max_seen)
+    // #pragma omp parallel for reduction(max : max_seen)
     for (auto it = el.begin(); it < el.end(); it++) {
       Edge e = *it;
       max_seen = std::max(max_seen, e.u);
@@ -79,7 +79,7 @@ class BuilderBase {
 
   pvector<NodeID_> CountDegrees(const EdgeList &el, bool transpose) {
     pvector<NodeID_> degrees(num_nodes_, 0);
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (auto it = el.begin(); it < el.end(); it++) {
       Edge e = *it;
       if (symmetrize_ || (!symmetrize_ && !transpose))
@@ -107,7 +107,7 @@ class BuilderBase {
     const size_t block_size = 1<<20;
     const size_t num_blocks = (degrees.size() + block_size - 1) / block_size;
     pvector<SGOffset> local_sums(num_blocks);
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (size_t block=0; block < num_blocks; block++) {
       SGOffset lsum = 0;
       size_t block_end = std::min((block + 1) * block_size, degrees.size());
@@ -123,7 +123,7 @@ class BuilderBase {
     }
     bulk_prefix[num_blocks] = total;
     pvector<SGOffset> prefix(degrees.size() + 1);
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (size_t block=0; block < num_blocks; block++) {
       SGOffset local_total = bulk_prefix[block];
       size_t block_end = std::min((block + 1) * block_size, degrees.size());
@@ -142,7 +142,7 @@ class BuilderBase {
                  DestID_*** sq_index, DestID_** sq_neighs) {
     pvector<NodeID_> diffs(g.num_nodes());
     DestID_ *n_start, *n_end;
-    #pragma omp parallel for private(n_start, n_end)
+    // #pragma omp parallel for private(n_start, n_end)
     for (NodeID_ n=0; n < g.num_nodes(); n++) {
       if (transpose) {
         n_start = g.in_neigh(n).begin();
@@ -159,7 +159,7 @@ class BuilderBase {
     pvector<SGOffset> sq_offsets = ParallelPrefixSum(diffs);
     *sq_neighs = new DestID_[sq_offsets[g.num_nodes()]];
     *sq_index = CSRGraph<NodeID_, DestID_>::GenIndex(sq_offsets, *sq_neighs);
-    #pragma omp parallel for private(n_start)
+    // #pragma omp parallel for private(n_start)
     for (NodeID_ n=0; n < g.num_nodes(); n++) {
       if (transpose)
         n_start = g.in_neigh(n).begin();
@@ -302,7 +302,7 @@ class BuilderBase {
     pvector<SGOffset> offsets = ParallelPrefixSum(degrees);
     *neighs = new DestID_[offsets[num_nodes_]];
     *index = CSRGraph<NodeID_, DestID_>::GenIndex(offsets, *neighs);
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (auto it = el.begin(); it < el.end(); it++) {
       Edge e = *it;
       if (symmetrize_ || (!symmetrize_ && !transpose))
@@ -374,14 +374,14 @@ class BuilderBase {
     t.Start();
     typedef std::pair<int64_t, NodeID_> degree_node_p;
     pvector<degree_node_p> degree_id_pairs(g.num_nodes());
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (NodeID_ n=0; n < g.num_nodes(); n++)
       degree_id_pairs[n] = std::make_pair(g.out_degree(n), n);
     std::sort(degree_id_pairs.begin(), degree_id_pairs.end(),
               std::greater<degree_node_p>());
     pvector<NodeID_> degrees(g.num_nodes());
     pvector<NodeID_> new_ids(g.num_nodes());
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (NodeID_ n=0; n < g.num_nodes(); n++) {
       degrees[n] = degree_id_pairs[n].first;
       new_ids[degree_id_pairs[n].second] = n;
@@ -389,7 +389,7 @@ class BuilderBase {
     pvector<SGOffset> offsets = ParallelPrefixSum(degrees);
     DestID_* neighs = new DestID_[offsets[g.num_nodes()]];
     DestID_** index = CSRGraph<NodeID_, DestID_>::GenIndex(offsets, neighs);
-    #pragma omp parallel for
+    // #pragma omp parallel for
     for (NodeID_ u=0; u < g.num_nodes(); u++) {
       for (NodeID_ v : g.out_neigh(u))
         neighs[offsets[new_ids[u]]++] = new_ids[v];

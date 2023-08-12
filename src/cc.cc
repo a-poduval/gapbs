@@ -40,6 +40,7 @@ using namespace std;
 
 // Place nodes u and v in same component of lower component ID
 void Link(NodeID u, NodeID v, pvector<NodeID>& comp) {
+  custom_roi_begin("Link");
   NodeID p1 = comp[u];
   NodeID p2 = comp[v];
   while (p1 != p2) {
@@ -53,6 +54,7 @@ void Link(NodeID u, NodeID v, pvector<NodeID>& comp) {
     p1 = comp[comp[high]];
     p2 = comp[low];
   }
+  custom_roi_end("Link");
 }
 
 

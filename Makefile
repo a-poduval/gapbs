@@ -17,7 +17,7 @@ ifneq ($(SERIAL), 1)
 	CXX_FLAGS += $(PAR_FLAG)
 endif
 
-KERNELS = bc bfs cc cc_sv pr pr_spmv sssp tc
+KERNELS = bc bfs cc# cc_sv pr pr_spmv sssp tc
 SUITE = $(KERNELS) converter
 
 .PHONY: all
@@ -35,6 +35,7 @@ src/%_optimized.ll : src/%.ll
 
 src/%.ll : src/%.cc src/*.h
 	$(CXX) $(CXX_FLAGS) -S -emit-llvm $< -o $@
+	#$(CXX) $(CXX_FLAGS) -I/usr/include/clang/15/include -S -emit-llvm $< -o $@
 
 # Testing
 include test/test.mk

@@ -59,13 +59,13 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
   depth_index.push_back(queue.begin());
   queue.slide_window();
   const NodeID* g_out_start = g.out_neigh(0).begin();
-  ////#pragma omp parallel
+  #pragma omp parallel
   {
     NodeID depth = 0;
     QueueBuffer<NodeID> lqueue(queue);
     while (!queue.empty()) {
       depth++;
-      ////#pragma omp for schedule(dynamic, 64) nowait
+      #pragma omp for schedule(dynamic, 64) nowait
       for (auto q_iter = queue.begin(); q_iter < queue.end(); q_iter++) {
         NodeID u = *q_iter;
         for (NodeID &v : g.out_neigh(u)) {
@@ -75,14 +75,14 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
           }
           if (depths[v] == depth) {
             succ.set_bit_atomic(&v - g_out_start);
-            ////#pragma omp atomic
+            #pragma omp atomic
             path_counts[v] += path_counts[u];
           }
         }
       }
       lqueue.flush();
-      ////#pragma omp barrier
-      ////#pragma omp single
+      #pragma omp barrier
+      #pragma omp single
       {
         depth_index.push_back(queue.begin());
         queue.slide_window();
@@ -120,7 +120,7 @@ pvector<ScoreT> Brandes(const Graph &g, SourcePicker<Graph> &sp,
     pvector<ScoreT> deltas(g.num_nodes(), 0);
     t.Start();
     for (int d=depth_index.size()-2; d >= 0; d--) {
-      ////#pragma omp parallel for schedule(dynamic, 64)
+      #pragma omp parallel for schedule(dynamic, 64)
       for (auto it = depth_index[d]; it < depth_index[d+1]; it++) {
         NodeID u = *it;
         ScoreT delta_u = 0;
@@ -138,10 +138,10 @@ pvector<ScoreT> Brandes(const Graph &g, SourcePicker<Graph> &sp,
   }
   // normalize scores
   ScoreT biggest_score = 0;
-  ////#pragma omp parallel for reduction(max : biggest_score)
+  #pragma omp parallel for reduction(max : biggest_score)
   for (NodeID n=0; n < g.num_nodes(); n++)
     biggest_score = max(biggest_score, scores[n]);
-  ////#pragma omp parallel for
+  #pragma omp parallel for
   for (NodeID n=0; n < g.num_nodes(); n++)
     scores[n] = scores[n] / biggest_score;
   return scores;

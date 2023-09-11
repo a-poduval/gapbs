@@ -60,7 +60,7 @@ void Link(NodeID u, NodeID v, pvector<NodeID>& comp) {
 
 // Reduce depth of tree for each component to 1 by crawling up parents
 void Compress(const Graph &g, pvector<NodeID>& comp) {
-  ////#pragma omp parallel for schedule(dynamic, 16384)
+  #pragma omp parallel for schedule(dynamic, 16384)
   for (NodeID n = 0; n < g.num_nodes(); n++) {
     while (comp[n] != comp[comp[n]]) {
       comp[n] = comp[comp[n]];
@@ -97,14 +97,14 @@ pvector<NodeID> Afforest(const Graph &g, int32_t neighbor_rounds = 2) {
   pvector<NodeID> comp(g.num_nodes());
 
   // Initialize each node to a single-node self-pointing tree
-  ////#pragma omp parallel for
+  #pragma omp parallel for
   for (NodeID n = 0; n < g.num_nodes(); n++)
     comp[n] = n;
 
   // Process a sparse sampled subgraph first for approximating components.
   // Sample by processing a fixed number of neighbors for each node (see paper)
   for (int r = 0; r < neighbor_rounds; ++r) {
-  ////#pragma omp parallel for schedule(dynamic,16384)
+  #pragma omp parallel for schedule(dynamic,16384)
     for (NodeID u = 0; u < g.num_nodes(); u++) {
       for (NodeID v : g.out_neigh(u, r)) {
         // Link at most one time if neighbor available at offset r
@@ -121,7 +121,7 @@ pvector<NodeID> Afforest(const Graph &g, int32_t neighbor_rounds = 2) {
 
   // Final 'link' phase over remaining edges (excluding largest component)
   if (!g.directed()) {
-    ////#pragma omp parallel for schedule(dynamic, 16384)
+    #pragma omp parallel for schedule(dynamic, 16384)
     for (NodeID u = 0; u < g.num_nodes(); u++) {
       // Skip processing nodes in the largest component
       if (comp[u] == c)
@@ -132,7 +132,7 @@ pvector<NodeID> Afforest(const Graph &g, int32_t neighbor_rounds = 2) {
       }
     }
   } else {
-    ////#pragma omp parallel for schedule(dynamic, 16384)
+    #pragma omp parallel for schedule(dynamic, 16384)
     for (NodeID u = 0; u < g.num_nodes(); u++) {
       if (comp[u] == c)
         continue;

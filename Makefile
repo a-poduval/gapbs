@@ -2,7 +2,7 @@
 CXX=$(CUSTOM_CC)
 
 CXX_FLAGS += -std=c++11 -O2 -Wall -fno-inline -fxray-instrument
-#PAR_FLAG = -fopenmp=libomp
+PAR_FLAG = -fopenmp=libomp
 
 ifneq (,$(findstring icpc,$(CXX)))
 	PAR_FLAG = -openmp

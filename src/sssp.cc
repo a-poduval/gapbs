@@ -96,7 +96,7 @@ pvector<WeightT> DeltaStep(const WGraph &g, NodeID source, WeightT delta) {
   size_t frontier_tails[2] = {1, 0};
   frontier[0] = source;
   t.Start();
-  ////#pragma omp parallel
+  #pragma omp parallel
   {
     vector<vector<NodeID> > local_bins(0);
     size_t iter = 0;
@@ -105,7 +105,7 @@ pvector<WeightT> DeltaStep(const WGraph &g, NodeID source, WeightT delta) {
       size_t &next_bin_index = shared_indexes[(iter+1)&1];
       size_t &curr_frontier_tail = frontier_tails[iter&1];
       size_t &next_frontier_tail = frontier_tails[(iter+1)&1];
-      ////#pragma omp for nowait schedule(dynamic, 64)
+      #pragma omp for nowait schedule(dynamic, 64)
       for (size_t i=0; i < curr_frontier_tail; i++) {
         NodeID u = frontier[i];
         if (dist[u] >= delta * static_cast<WeightT>(curr_bin_index))
@@ -121,13 +121,13 @@ pvector<WeightT> DeltaStep(const WGraph &g, NodeID source, WeightT delta) {
       }
       for (size_t i=curr_bin_index; i < local_bins.size(); i++) {
         if (!local_bins[i].empty()) {
-          ////#pragma omp critical
+          #pragma omp critical
           next_bin_index = min(next_bin_index, i);
           break;
         }
       }
-      ////#pragma omp barrier
-      ////#pragma omp single nowait
+      #pragma omp barrier
+      #pragma omp single nowait
       {
         t.Stop();
         PrintStep(curr_bin_index, t.Millisecs(), curr_frontier_tail);
@@ -143,9 +143,9 @@ pvector<WeightT> DeltaStep(const WGraph &g, NodeID source, WeightT delta) {
         local_bins[next_bin_index].resize(0);
       }
       iter++;
-      ////#pragma omp barrier
+      #pragma omp barrier
     }
-    ////#pragma omp single
+    #pragma omp single
     cout << "took " << iter << " iterations" << endl;
   }
   return dist;

@@ -35,7 +35,7 @@ class CLBase {
 
   int scale_ = -1;
   int degree_ = 16;
-  std::string filename_ = "../benchmark/graphs/raw/twitterU.sg";
+  std::string filename_ = "../../graphs/raw/twitterU.sg";
   bool symmetrize_ = false;
   bool uniform_ = false;
   bool in_place_ = false;

@@ -33,18 +33,21 @@ const float kDamp = 0.85;
 
 pvector<ScoreT> PageRankPullGS(const Graph &g, int max_iters,
                              double epsilon = 0) {
-#pragma begin_instrument 1
   const ScoreT init_score = 1.0f / g.num_nodes();
   const ScoreT base_score = (1.0f - kDamp) / g.num_nodes();
   pvector<ScoreT> scores(g.num_nodes(), init_score);
   pvector<ScoreT> outgoing_contrib(g.num_nodes());
   #pragma omp parallel for
-  for (NodeID n=0; n < g.num_nodes(); n++)
+  for (NodeID n=0; n < g.num_nodes(); n++) {
+#pragma begin_instrument 1
     outgoing_contrib[n] = init_score / g.out_degree(n);
+#pragma end_instrument 1
+  }
   for (int iter=0; iter < max_iters; iter++) {
     double error = 0;
     #pragma omp parallel for reduction(+ : error) schedule(dynamic, 16384)
     for (NodeID u=0; u < g.num_nodes(); u++) {
+#pragma begin_instrument 1
       ScoreT incoming_total = 0;
       for (NodeID v : g.in_neigh(u))
         incoming_total += outgoing_contrib[v];
@@ -52,12 +55,12 @@ pvector<ScoreT> PageRankPullGS(const Graph &g, int max_iters,
       scores[u] = base_score + kDamp * incoming_total;
       error += fabs(scores[u] - old_score);
       outgoing_contrib[u] = scores[u] / g.out_degree(u);
+#pragma end_instrument 1
     }
     printf(" %2d    %lf\n", iter, error);
     if (error < epsilon)
       break;
   }
-#pragma end_instrument 1
   return scores;
 }
 

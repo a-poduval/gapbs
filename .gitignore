@@ -17,3 +17,4 @@ benchmark/graphs/raw/*
 src/*.ll
 *.zlog
 *.log
+*.csv

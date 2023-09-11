@@ -45,11 +45,11 @@ using namespace std;
 
 int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
                Bitmap &next) {
-  custom_roi_begin("BUStep"); 
   int64_t awake_count = 0;
   next.reset();
   #pragma omp parallel for reduction(+ : awake_count) schedule(dynamic, 1024)
   for (NodeID u=0; u < g.num_nodes(); u++) {
+    custom_roi_begin("BUStep"); 
     if (parent[u] < 0) {
       for (NodeID v : g.in_neigh(u)) {
         if (front.get_bit(v)) {
@@ -60,8 +60,8 @@ int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
         }
       }
     }
+    custom_roi_end("BUStep");
   }
-  custom_roi_end("BUStep");
   return awake_count;
 }
 

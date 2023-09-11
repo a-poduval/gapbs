@@ -50,10 +50,10 @@ to relabel the graph, we use the heuristic in WorthRelabelling.
 using namespace std;
 
 size_t OrderedCount(const Graph &g) {
-  custom_roi_begin("OrderedCount");
   size_t total = 0;
   #pragma omp parallel for reduction(+ : total) schedule(dynamic, 64)
   for (NodeID u=0; u < g.num_nodes(); u++) {
+    custom_roi_begin("OrderedCount");
     for (NodeID v : g.out_neigh(u)) {
       if (v > u)
         break;
@@ -67,8 +67,8 @@ size_t OrderedCount(const Graph &g) {
           total++;
       }
     }
+    custom_roi_end("OrderedCount");
   }
-  custom_roi_end("OrderedCount");
   return total;
 }
 

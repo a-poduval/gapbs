@@ -33,18 +33,21 @@ const float kDamp = 0.85;
 
 pvector<ScoreT> PageRankPullGS(const Graph &g, int max_iters,
                              double epsilon = 0) {
-  custom_roi_begin("PageRankPullGS"); 
   const ScoreT init_score = 1.0f / g.num_nodes();
   const ScoreT base_score = (1.0f - kDamp) / g.num_nodes();
   pvector<ScoreT> scores(g.num_nodes(), init_score);
   pvector<ScoreT> outgoing_contrib(g.num_nodes());
   #pragma omp parallel for
-  for (NodeID n=0; n < g.num_nodes(); n++)
+  for (NodeID n=0; n < g.num_nodes(); n++) {
+    custom_roi_begin("PageRankPullGS"); 
     outgoing_contrib[n] = init_score / g.out_degree(n);
+    custom_roi_end("PageRankPullGS");
+  }
   for (int iter=0; iter < max_iters; iter++) {
     double error = 0;
     #pragma omp parallel for reduction(+ : error) schedule(dynamic, 16384)
     for (NodeID u=0; u < g.num_nodes(); u++) {
+      custom_roi_begin("PageRankPullGS"); 
       ScoreT incoming_total = 0;
       for (NodeID v : g.in_neigh(u))
         incoming_total += outgoing_contrib[v];
@@ -52,12 +55,12 @@ pvector<ScoreT> PageRankPullGS(const Graph &g, int max_iters,
       scores[u] = base_score + kDamp * incoming_total;
       error += fabs(scores[u] - old_score);
       outgoing_contrib[u] = scores[u] / g.out_degree(u);
+      custom_roi_end("PageRankPullGS");
     }
     printf(" %2d    %lf\n", iter, error);
     if (error < epsilon)
       break;
   }
-  custom_roi_end("PageRankPullGS");
   return scores;
 }
 

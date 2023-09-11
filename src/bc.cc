@@ -66,7 +66,7 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
       depth++;
       #pragma omp for schedule(dynamic, 64) nowait
       for (auto q_iter = queue.begin(); q_iter < queue.end(); q_iter++) {
-#pragma begin_instrument 1
+        #pragma begin_instrument 1
         NodeID u = *q_iter;
         for (NodeID &v : g.out_neigh(u)) {
           if ((depths[v] == -1) &&
@@ -79,7 +79,7 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
             path_counts[v] += path_counts[u];
           }
         }
-#pragma end_instrument 1
+        #pragma end_instrument 1
       }
       lqueue.flush();
       #pragma omp barrier

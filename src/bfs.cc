@@ -49,7 +49,7 @@ int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
   next.reset();
   #pragma omp parallel for reduction(+ : awake_count) schedule(dynamic, 1024)
   for (NodeID u=0; u < g.num_nodes(); u++) {
-#pragma begin_instrument 1
+    #pragma begin_instrument 1
     if (parent[u] < 0) {
       for (NodeID v : g.in_neigh(u)) {
         if (front.get_bit(v)) {
@@ -60,7 +60,7 @@ int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
         }
       }
     }
-#pragma end_instrument 1
+    #pragma end_instrument 1
   }
   return awake_count;
 }

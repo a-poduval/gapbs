@@ -53,7 +53,7 @@ size_t OrderedCount(const Graph &g) {
   size_t total = 0;
   #pragma omp parallel for reduction(+ : total) schedule(dynamic, 64)
   for (NodeID u=0; u < g.num_nodes(); u++) {
-#pragma begin_instrument 1
+    #pragma begin_instrument 1
     for (NodeID v : g.out_neigh(u)) {
       if (v > u)
         break;
@@ -67,7 +67,7 @@ size_t OrderedCount(const Graph &g) {
           total++;
       }
     }
-#pragma end_instrument 1
+    #pragma end_instrument 1
   }
   return total;
 }

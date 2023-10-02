@@ -54,8 +54,9 @@ pvector<ScoreT> PageRankPullGS(const Graph &g, int max_iters,
       ScoreT old_score = scores[u];
       scores[u] = base_score + kDamp * incoming_total;
       error += fabs(scores[u] - old_score);
-      outgoing_contrib[u] = scores[u] / g.out_degree(u);
+      // outgoing_contrib[u] = scores[u] / g.out_degree(u);
       #pragma end_instrument 1
+      outgoing_contrib[u] = scores[u] / g.out_degree(u);
     }
     printf(" %2d    %lf\n", iter, error);
     if (error < epsilon)

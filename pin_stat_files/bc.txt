@@ -1,0 +1,200 @@
+Thread 1
+Function:	PBFS
+PBFS Reads:	1668465950
+PBFS Read Bytes:	10814049996
+PBFS Writes:	581326159
+PBFS Write Bytes:	4613280792
+Total Number of Reads:	1668465950
+Total Number of Bytes Read:	10797119180
+Total Number of Writes:	581326159
+Total Number of Bytes Written:	4596349976
+Thread 2
+Function:	PBFS
+PBFS Reads:	1783260441
+PBFS Read Bytes:	11748179352
+PBFS Writes:	664393698
+PBFS Write Bytes:	5237477736
+Total Number of Reads:	1783260441
+Total Number of Bytes Read:	11727753624
+Total Number of Writes:	664393698
+Total Number of Bytes Written:	5217052008
+Thread 3
+Function:	PBFS
+PBFS Reads:	1889547524
+PBFS Read Bytes:	12783562836
+PBFS Writes:	754340533
+PBFS Write Bytes:	5973549716
+Total Number of Reads:	1889547524
+Total Number of Bytes Read:	12761433172
+Total Number of Writes:	754340533
+Total Number of Bytes Written:	5951420052
+Thread 5
+Function:	PBFS
+PBFS Reads:	1867970145
+PBFS Read Bytes:	12361047304
+PBFS Writes:	699081608
+PBFS Write Bytes:	5535775940
+Total Number of Reads:	1867970145
+Total Number of Bytes Read:	12334136584
+Total Number of Writes:	699081608
+Total Number of Bytes Written:	5508865220
+Thread 4
+Function:	PBFS
+PBFS Reads:	1880711940
+PBFS Read Bytes:	12762242092
+PBFS Writes:	782686210
+PBFS Write Bytes:	6116628592
+Total Number of Reads:	1880711940
+Total Number of Bytes Read:	12730399788
+Total Number of Writes:	782686210
+Total Number of Bytes Written:	6084786288
+Thread 6
+Function:	PBFS
+PBFS Reads:	2199462329
+PBFS Read Bytes:	14961556684
+PBFS Writes:	890745675
+PBFS Write Bytes:	7063597568
+Total Number of Reads:	2199462329
+Total Number of Bytes Read:	14926275788
+Total Number of Writes:	890745675
+Total Number of Bytes Written:	7028316672
+Thread 7
+Function:	PBFS
+PBFS Reads:	1826555525
+PBFS Read Bytes:	12174168492
+PBFS Writes:	696222196
+PBFS Write Bytes:	5527372476
+Total Number of Reads:	1826555525
+Total Number of Bytes Read:	12136997276
+Total Number of Writes:	696222196
+Total Number of Bytes Written:	5490201260
+Thread 8
+Function:	PBFS
+PBFS Reads:	1662183011
+PBFS Read Bytes:	11231766148
+PBFS Writes:	657492748
+PBFS Write Bytes:	5227994248
+Total Number of Reads:	1662183011
+Total Number of Bytes Read:	11197355636
+Total Number of Writes:	657492748
+Total Number of Bytes Written:	5193583736
+Thread 9
+Function:	PBFS
+PBFS Reads:	1721923832
+PBFS Read Bytes:	11561591920
+PBFS Writes:	669546182
+PBFS Write Bytes:	5322099220
+Total Number of Reads:	1721923832
+Total Number of Bytes Read:	11523068016
+Total Number of Writes:	669546182
+Total Number of Bytes Written:	5283575316
+Thread 10
+Function:	PBFS
+PBFS Reads:	1711397968
+PBFS Read Bytes:	11530162860
+PBFS Writes:	675557970
+PBFS Write Bytes:	5352734240
+Total Number of Reads:	1711397968
+Total Number of Bytes Read:	11500998316
+Total Number of Writes:	675557970
+Total Number of Bytes Written:	5323569696
+Thread 11
+Function:	PBFS
+PBFS Reads:	1888361378
+PBFS Read Bytes:	12613375820
+PBFS Writes:	722336131
+PBFS Write Bytes:	5741176528
+Total Number of Reads:	1888361378
+Total Number of Bytes Read:	12576463660
+Total Number of Writes:	722336131
+Total Number of Bytes Written:	5704264368
+Thread 12
+Function:	PBFS
+PBFS Reads:	1762561846
+PBFS Read Bytes:	11825867436
+PBFS Writes:	688612553
+PBFS Write Bytes:	5451680816
+Total Number of Reads:	1762561846
+Total Number of Bytes Read:	11796069756
+Total Number of Writes:	688612553
+Total Number of Bytes Written:	5421883136
+Thread 13
+Function:	PBFS
+PBFS Reads:	1771857732
+PBFS Read Bytes:	11755229256
+PBFS Writes:	663781660
+PBFS Write Bytes:	5280533176
+Total Number of Reads:	1771857732
+Total Number of Bytes Read:	11714687384
+Total Number of Writes:	663781660
+Total Number of Bytes Written:	5239991304
+Thread 14
+Function:	PBFS
+PBFS Reads:	1839518554
+PBFS Read Bytes:	12501391376
+PBFS Writes:	741876342
+PBFS Write Bytes:	5888303284
+Total Number of Reads:	1839518554
+Total Number of Bytes Read:	12469182480
+Total Number of Writes:	741876342
+Total Number of Bytes Written:	5856094388
+Thread 15
+Function:	PBFS
+PBFS Reads:	1806079744
+PBFS Read Bytes:	12008365588
+PBFS Writes:	680509215
+PBFS Write Bytes:	5413967880
+Total Number of Reads:	1806079744
+Total Number of Bytes Read:	11969457684
+Total Number of Writes:	680509215
+Total Number of Bytes Written:	5375059976
+Thread 17
+Function:	PBFS
+PBFS Reads:	3496011545
+PBFS Read Bytes:	23403921556
+PBFS Writes:	1349240888
+PBFS Write Bytes:	10701120464
+Total Number of Reads:	3496011545
+Total Number of Bytes Read:	23356247524
+Total Number of Writes:	1349240888
+Total Number of Bytes Written:	10653446432
+Thread 16
+Function:	PBFS
+PBFS Reads:	2355187396
+PBFS Read Bytes:	15375008216
+PBFS Writes:	838918276
+PBFS Write Bytes:	6672634304
+Total Number of Reads:	2355187396
+Total Number of Bytes Read:	15327671944
+Total Number of Writes:	838918276
+Total Number of Bytes Written:	6625298032
+Thread 18
+Function:	PBFS
+PBFS Reads:	2337017174
+PBFS Read Bytes:	15626839600
+PBFS Writes:	896637577
+PBFS Write Bytes:	7126193424
+Total Number of Reads:	2337017174
+Total Number of Bytes Read:	15582527456
+Total Number of Writes:	896637577
+Total Number of Bytes Written:	7081881280
+Thread 19
+Function:	PBFS
+PBFS Reads:	2013167258
+PBFS Read Bytes:	13080445204
+PBFS Writes:	709359733
+PBFS Write Bytes:	5634826488
+Total Number of Reads:	2013167258
+Total Number of Bytes Read:	13035842068
+Total Number of Writes:	709359733
+Total Number of Bytes Written:	5590223352
+Thread 0
+Function:	PBFS
+PBFS Reads:	1828817531
+PBFS Read Bytes:	11878771556
+PBFS Writes:	665590003
+PBFS Write Bytes:	5194642648
+Total Number of Reads:	1828817531
+Total Number of Bytes Read:	11867420276
+Total Number of Writes:	665590003
+Total Number of Bytes Written:	5183291368

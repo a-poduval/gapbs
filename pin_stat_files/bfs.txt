@@ -1,0 +1,200 @@
+Thread 1
+Function:	BUStep
+BUStep Reads:	267696074
+BUStep Read Bytes:	2103400332
+BUStep Writes:	149594519
+BUStep Write Bytes:	1286070484
+Total Number of Reads:	267696074
+Total Number of Bytes Read:	1981486988
+Total Number of Writes:	149594519
+Total Number of Bytes Written:	1164157140
+Thread 2
+Function:	BUStep
+BUStep Reads:	284629842
+BUStep Read Bytes:	2237143320
+BUStep Writes:	161075269
+BUStep Write Bytes:	1382480452
+Total Number of Reads:	284629842
+Total Number of Bytes Read:	2108741912
+Total Number of Writes:	161075269
+Total Number of Bytes Written:	1254079044
+Thread 4
+Function:	BUStep
+BUStep Reads:	218406719
+BUStep Read Bytes:	1717391952
+BUStep Writes:	122860748
+BUStep Write Bytes:	1056456596
+Total Number of Reads:	218406719
+Total Number of Bytes Read:	1617302096
+Total Number of Writes:	122860748
+Total Number of Bytes Written:	956366740
+Thread 3
+Function:	BUStep
+BUStep Reads:	300940189
+BUStep Read Bytes:	2370572508
+BUStep Writes:	174839537
+BUStep Write Bytes:	1499262144
+Total Number of Reads:	300940189
+Total Number of Bytes Read:	2233700572
+Total Number of Writes:	174839537
+Total Number of Bytes Written:	1362390208
+Thread 7
+Function:	BUStep
+BUStep Reads:	259682669
+BUStep Read Bytes:	2080389840
+BUStep Writes:	156833171
+BUStep Write Bytes:	1375177648
+Total Number of Reads:	259682669
+Total Number of Bytes Read:	1929558736
+Total Number of Writes:	156833171
+Total Number of Bytes Written:	1224346544
+Thread 5
+Function:	BUStep
+BUStep Reads:	218164501
+BUStep Read Bytes:	1768081380
+BUStep Writes:	130382944
+BUStep Write Bytes:	1167294532
+Total Number of Reads:	218164501
+Total Number of Bytes Read:	1618118628
+Total Number of Writes:	130382944
+Total Number of Bytes Written:	1017331780
+Thread 6
+Function:	BUStep
+BUStep Reads:	245729983
+BUStep Read Bytes:	1983582564
+BUStep Writes:	148760494
+BUStep Write Bytes:	1319209476
+Total Number of Reads:	245729983
+Total Number of Bytes Read:	1825375860
+Total Number of Writes:	148760494
+Total Number of Bytes Written:	1161002772
+Thread 8
+Function:	BUStep
+BUStep Reads:	242401769
+BUStep Read Bytes:	1955620728
+BUStep Writes:	148757638
+BUStep Write Bytes:	1315338772
+Total Number of Reads:	242401769
+Total Number of Bytes Read:	1802230920
+Total Number of Writes:	148757638
+Total Number of Bytes Written:	1161948964
+Thread 9
+Function:	BUStep
+BUStep Reads:	259512081
+BUStep Read Bytes:	2086731096
+BUStep Writes:	159632461
+BUStep Write Bytes:	1404656584
+Total Number of Reads:	259512081
+Total Number of Bytes Read:	1929706840
+Total Number of Writes:	159632461
+Total Number of Bytes Written:	1247632328
+Thread 10
+Function:	BUStep
+BUStep Reads:	301029135
+BUStep Read Bytes:	2410095828
+BUStep Writes:	182257207
+BUStep Write Bytes:	1595459984
+Total Number of Reads:	301029135
+Total Number of Bytes Read:	2237474004
+Total Number of Writes:	182257207
+Total Number of Bytes Written:	1422838160
+Thread 11
+Function:	BUStep
+BUStep Reads:	312544314
+BUStep Read Bytes:	2496080760
+BUStep Writes:	193247384
+BUStep Write Bytes:	1681689352
+Total Number of Reads:	312544314
+Total Number of Bytes Read:	2325719928
+Total Number of Writes:	193247384
+Total Number of Bytes Written:	1511328520
+Thread 12
+Function:	BUStep
+BUStep Reads:	290297941
+BUStep Read Bytes:	2329734504
+BUStep Writes:	178940838
+BUStep Write Bytes:	1570319108
+Total Number of Reads:	290297941
+Total Number of Bytes Read:	2158685544
+Total Number of Writes:	178940838
+Total Number of Bytes Written:	1399270148
+Thread 13
+Function:	BUStep
+BUStep Reads:	260226268
+BUStep Read Bytes:	2093779176
+BUStep Writes:	160502133
+BUStep Write Bytes:	1414199420
+Total Number of Reads:	260226268
+Total Number of Bytes Read:	1934690536
+Total Number of Writes:	160502133
+Total Number of Bytes Written:	1255110780
+Thread 15
+Function:	BUStep
+BUStep Reads:	194343360
+BUStep Read Bytes:	1561192680
+BUStep Writes:	120900110
+BUStep Write Bytes:	1062254680
+Total Number of Reads:	194343360
+Total Number of Bytes Read:	1445325032
+Total Number of Writes:	120900110
+Total Number of Bytes Written:	946387032
+Thread 14
+Function:	BUStep
+BUStep Reads:	200621298
+BUStep Read Bytes:	1615471932
+BUStep Writes:	125864716
+BUStep Write Bytes:	1109521680
+Total Number of Reads:	200621298
+Total Number of Bytes Read:	1492051260
+Total Number of Writes:	125864716
+Total Number of Bytes Written:	986101008
+Thread 16
+Function:	BUStep
+BUStep Reads:	378405756
+BUStep Read Bytes:	3034428384
+BUStep Writes:	233149604
+BUStep Write Bytes:	2044526336
+Total Number of Reads:	378405756
+Total Number of Bytes Read:	2813487344
+Total Number of Writes:	233149604
+Total Number of Bytes Written:	1823585296
+Thread 18
+Function:	BUStep
+BUStep Reads:	283864203
+BUStep Read Bytes:	2266098204
+BUStep Writes:	176101681
+BUStep Write Bytes:	1532055752
+Total Number of Reads:	283864203
+Total Number of Bytes Read:	2112154140
+Total Number of Writes:	176101681
+Total Number of Bytes Written:	1378111688
+Thread 17
+Function:	BUStep
+BUStep Reads:	257112859
+BUStep Read Bytes:	2051747520
+BUStep Writes:	156620433
+BUStep Write Bytes:	1363169984
+Total Number of Reads:	257112859
+Total Number of Bytes Read:	1912024768
+Total Number of Writes:	156620433
+Total Number of Bytes Written:	1223447232
+Thread 19
+Function:	BUStep
+BUStep Reads:	257850658
+BUStep Read Bytes:	2046363636
+BUStep Writes:	153885077
+BUStep Write Bytes:	1331578892
+Total Number of Reads:	257850658
+Total Number of Bytes Read:	1915734004
+Total Number of Writes:	153885077
+Total Number of Bytes Written:	1200949260
+Thread 0
+Function:	BUStep
+BUStep Reads:	304838418
+BUStep Read Bytes:	2397634968
+BUStep Writes:	170389790
+BUStep Write Bytes:	1467457328
+Total Number of Reads:	304838418
+Total Number of Bytes Read:	2256208280
+Total Number of Writes:	170389790
+Total Number of Bytes Written:	1326030640

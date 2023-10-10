@@ -1,0 +1,200 @@
+Thread 1
+Function:	PageRankPull
+PageRankPull Reads:	11283034479
+PageRankPull Read Bytes:	70155113684
+PageRankPull Writes:	5099197382
+PageRankPull Write Bytes:	34296133284
+Total Number of Reads:	11283034479
+Total Number of Bytes Read:	68921464020
+Total Number of Writes:	5099197382
+Total Number of Bytes Written:	33062483620
+Thread 2
+Function:	PageRankPull
+PageRankPull Reads:	12714569014
+PageRankPull Read Bytes:	77357094600
+PageRankPull Writes:	5603326076
+PageRankPull Write Bytes:	36888367848
+Total Number of Reads:	12714569014
+Total Number of Bytes Read:	76267624136
+Total Number of Writes:	5603326076
+Total Number of Bytes Written:	35798897384
+Thread 3
+Function:	PageRankPull
+PageRankPull Reads:	12616213813
+PageRankPull Read Bytes:	77415043164
+PageRankPull Writes:	5615161058
+PageRankPull Write Bytes:	37282601292
+Total Number of Reads:	12616213813
+Total Number of Bytes Read:	76217831516
+Total Number of Writes:	5615161058
+Total Number of Bytes Written:	36085389644
+Thread 5
+Function:	PageRankPull
+PageRankPull Reads:	14092663989
+PageRankPull Read Bytes:	83970996828
+PageRankPull Writes:	6061797858
+PageRankPull Write Bytes:	39053306700
+Total Number of Reads:	14092663989
+Total Number of Bytes Read:	83076823644
+Total Number of Writes:	6061797858
+Total Number of Bytes Written:	38159133516
+Thread 4
+Function:	PageRankPull
+PageRankPull Reads:	14481690512
+PageRankPull Read Bytes:	83834564800
+PageRankPull Writes:	6022786208
+PageRankPull Write Bytes:	37590043584
+Total Number of Reads:	14481690512
+Total Number of Bytes Read:	83350122688
+Total Number of Writes:	6022786208
+Total Number of Bytes Written:	37105601472
+Thread 6
+Function:	PageRankPull
+PageRankPull Reads:	15327272242
+PageRankPull Read Bytes:	88784583960
+PageRankPull Writes:	6379074068
+PageRankPull Write Bytes:	39841803384
+Total Number of Reads:	15327272242
+Total Number of Bytes Read:	88262130968
+Total Number of Writes:	6379074068
+Total Number of Bytes Written:	39319350392
+Thread 7
+Function:	PageRankPull
+PageRankPull Reads:	14249230104
+PageRankPull Read Bytes:	83692498464
+PageRankPull Writes:	6027299952
+PageRankPull Write Bytes:	38232902304
+Total Number of Reads:	14249230104
+Total Number of Bytes Read:	83002797600
+Total Number of Writes:	6027299952
+Total Number of Bytes Written:	37543201440
+Thread 8
+Function:	PageRankPull
+PageRankPull Reads:	13493560379
+PageRankPull Read Bytes:	79890270948
+PageRankPull Writes:	5761142398
+PageRankPull Write Bytes:	36864022260
+Total Number of Reads:	13493560379
+Total Number of Bytes Read:	79124548324
+Total Number of Writes:	5761142398
+Total Number of Bytes Written:	36098299636
+Thread 9
+Function:	PageRankPull
+PageRankPull Reads:	13244830140
+PageRankPull Read Bytes:	78918017872
+PageRankPull Writes:	5697013528
+PageRankPull Write Bytes:	36702595728
+Total Number of Reads:	13244830140
+Total Number of Bytes Read:	78077846352
+Total Number of Writes:	5697013528
+Total Number of Bytes Written:	35862424208
+Thread 10
+Function:	PageRankPull
+PageRankPull Reads:	13678061957
+PageRankPull Read Bytes:	82777834012
+PageRankPull Writes:	5990840066
+PageRankPull Write Bytes:	39226821132
+Total Number of Reads:	13678061957
+Total Number of Bytes Read:	81683907100
+Total Number of Writes:	5990840066
+Total Number of Bytes Written:	38132894220
+Thread 11
+Function:	PageRankPull
+PageRankPull Reads:	14758866409
+PageRankPull Read Bytes:	88568181836
+PageRankPull Writes:	6401122090
+PageRankPull Write Bytes:	41549314812
+Total Number of Reads:	14758866409
+Total Number of Bytes Read:	87520654412
+Total Number of Writes:	6401122090
+Total Number of Bytes Written:	40501787388
+Thread 12
+Function:	PageRankPull
+PageRankPull Reads:	12547741177
+PageRankPull Read Bytes:	75211307788
+PageRankPull Writes:	5434738890
+PageRankPull Write Bytes:	35233543356
+Total Number of Reads:	12547741177
+Total Number of Bytes Read:	74336271116
+Total Number of Writes:	5434738890
+Total Number of Bytes Written:	34358506684
+Thread 14
+Function:	PageRankPull
+PageRankPull Reads:	12677788094
+PageRankPull Read Bytes:	76188397608
+PageRankPull Writes:	5507676748
+PageRankPull Write Bytes:	35803291080
+Total Number of Reads:	12677788094
+Total Number of Bytes Read:	75269320744
+Total Number of Writes:	5507676748
+Total Number of Bytes Written:	34884214216
+Thread 13
+Function:	PageRankPull
+PageRankPull Reads:	13814391146
+PageRankPull Read Bytes:	82742957240
+PageRankPull Writes:	5978256324
+PageRankPull Write Bytes:	38727431832
+Total Number of Reads:	13814391146
+Total Number of Bytes Read:	81790325944
+Total Number of Writes:	5978256324
+Total Number of Bytes Written:	37774800536
+Thread 15
+Function:	PageRankPull
+PageRankPull Reads:	14945876802
+PageRankPull Read Bytes:	88389077976
+PageRankPull Writes:	6372825012
+PageRankPull Write Bytes:	40728366648
+Total Number of Reads:	14945876802
+Total Number of Bytes Read:	87558605784
+Total Number of Writes:	6372825012
+Total Number of Bytes Written:	39897894456
+Thread 16
+Function:	PageRankPull
+PageRankPull Reads:	19621760512
+PageRankPull Read Bytes:	116455041024
+PageRankPull Writes:	8401316864
+PageRankPull Write Bytes:	53898086400
+Total Number of Reads:	19621760512
+Total Number of Bytes Read:	115291645952
+Total Number of Writes:	8401316864
+Total Number of Bytes Written:	52734691328
+Thread 17
+Function:	PageRankPull
+PageRankPull Reads:	22007907218
+PageRankPull Read Bytes:	130369100644
+PageRankPull Writes:	9402152198
+PageRankPull Write Bytes:	60196003572
+Total Number of Reads:	22007907218
+Total Number of Bytes Read:	129108070516
+Total Number of Writes:	9402152198
+Total Number of Bytes Written:	58934973444
+Thread 18
+Function:	PageRankPull
+PageRankPull Reads:	20542524436
+PageRankPull Read Bytes:	122749171052
+PageRankPull Writes:	8865282562
+PageRankPull Write Bytes:	57286049820
+Total Number of Reads:	20542524436
+Total Number of Bytes Read:	121384386236
+Total Number of Writes:	8865282562
+Total Number of Bytes Written:	55921265004
+Thread 19
+Function:	PageRankPull
+PageRankPull Reads:	17621702045
+PageRankPull Read Bytes:	107121323364
+PageRankPull Writes:	7758220846
+PageRankPull Write Bytes:	51030630516
+Total Number of Reads:	17621702045
+Total Number of Bytes Read:	105627554884
+Total Number of Writes:	7758220846
+Total Number of Bytes Written:	49536862036
+Thread 0
+Function:	PageRankPull
+PageRankPull Reads:	13435066532
+PageRankPull Read Bytes:	80809803056
+PageRankPull Writes:	5842589352
+PageRankPull Write Bytes:	38014879728
+Total Number of Reads:	13435066532
+Total Number of Bytes Read:	79823355184
+Total Number of Writes:	5842589352
+Total Number of Bytes Written:	37028431856

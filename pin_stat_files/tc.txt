@@ -1,0 +1,200 @@
+Thread 1
+Function:	OrderedCount
+OrderedCount Reads:	40461324486
+OrderedCount Read Bytes:	180855035352
+OrderedCount Writes:	3265150391
+OrderedCount Write Bytes:	25356426736
+Total Number of Reads:	40461324486
+Total Number of Bytes Read:	180828831192
+Total Number of Writes:	3265150391
+Total Number of Bytes Written:	25330222576
+Thread 2
+Function:	OrderedCount
+OrderedCount Reads:	39946917561
+OrderedCount Read Bytes:	182916273508
+OrderedCount Writes:	3969901660
+OrderedCount Write Bytes:	30847423344
+Total Number of Reads:	39946917561
+Total Number of Bytes Read:	182866447716
+Total Number of Writes:	3969901660
+Total Number of Bytes Written:	30797597552
+Thread 3
+Function:	OrderedCount
+OrderedCount Reads:	41039387295
+OrderedCount Read Bytes:	184396691644
+OrderedCount Writes:	3472909310
+OrderedCount Write Bytes:	26991952344
+Total Number of Reads:	41039387295
+Total Number of Bytes Read:	184346795196
+Total Number of Writes:	3472909310
+Total Number of Bytes Written:	26942055896
+Thread 4
+Function:	OrderedCount
+OrderedCount Reads:	44688174026
+OrderedCount Read Bytes:	196498817704
+OrderedCount Writes:	3044545901
+OrderedCount Write Bytes:	23669360408
+Total Number of Reads:	44688174026
+Total Number of Bytes Read:	196448499368
+Total Number of Writes:	3044545901
+Total Number of Bytes Written:	23619042072
+Thread 5
+Function:	OrderedCount
+OrderedCount Reads:	48052433679
+OrderedCount Read Bytes:	207158630780
+OrderedCount Writes:	2563986842
+OrderedCount Write Bytes:	19942047000
+Total Number of Reads:	48052433679
+Total Number of Bytes Read:	207107728764
+Total Number of Writes:	2563986842
+Total Number of Bytes Written:	19891144984
+Thread 6
+Function:	OrderedCount
+OrderedCount Reads:	43056000097
+OrderedCount Read Bytes:	185164667588
+OrderedCount Writes:	2218293633
+OrderedCount Write Bytes:	17263354064
+Total Number of Reads:	43056000097
+Total Number of Bytes Read:	185110716100
+Total Number of Writes:	2218293633
+Total Number of Bytes Written:	17209402576
+Thread 7
+Function:	OrderedCount
+OrderedCount Reads:	39397447342
+OrderedCount Read Bytes:	168972807928
+OrderedCount Writes:	1949160858
+OrderedCount Write Bytes:	15183765624
+Total Number of Reads:	39397447342
+Total Number of Bytes Read:	168910627576
+Total Number of Writes:	1949160858
+Total Number of Bytes Written:	15121585272
+Thread 8
+Function:	OrderedCount
+OrderedCount Reads:	35622486251
+OrderedCount Read Bytes:	151086800876
+OrderedCount Writes:	1472330404
+OrderedCount Write Bytes:	11464767304
+Total Number of Reads:	35622486251
+Total Number of Bytes Read:	151044247532
+Total Number of Writes:	1472330404
+Total Number of Bytes Written:	11422213960
+Thread 9
+Function:	OrderedCount
+OrderedCount Reads:	32025663560
+OrderedCount Read Bytes:	135058504992
+OrderedCount Writes:	1188948963
+OrderedCount Write Bytes:	9274047256
+Total Number of Reads:	32025663560
+Total Number of Bytes Read:	135008313632
+Total Number of Writes:	1188948963
+Total Number of Bytes Written:	9223855896
+Thread 10
+Function:	OrderedCount
+OrderedCount Reads:	42269820930
+OrderedCount Read Bytes:	179027604936
+OrderedCount Writes:	1702801647
+OrderedCount Write Bytes:	13264248592
+Total Number of Reads:	42269820930
+Total Number of Bytes Read:	178973510088
+Total Number of Writes:	1702801647
+Total Number of Bytes Written:	13210153744
+Thread 11
+Function:	OrderedCount
+OrderedCount Reads:	42753508776
+OrderedCount Read Bytes:	180113131552
+OrderedCount Writes:	1556199234
+OrderedCount Write Bytes:	12130315520
+Total Number of Reads:	42753508776
+Total Number of Bytes Read:	180055674912
+Total Number of Writes:	1556199234
+Total Number of Bytes Written:	12072858880
+Thread 12
+Function:	OrderedCount
+OrderedCount Reads:	44171703632
+OrderedCount Read Bytes:	184874779136
+OrderedCount Writes:	1400820286
+OrderedCount Write Bytes:	10916049896
+Total Number of Reads:	44171703632
+Total Number of Bytes Read:	184826152448
+Total Number of Writes:	1400820286
+Total Number of Bytes Written:	10867423208
+Thread 13
+Function:	OrderedCount
+OrderedCount Reads:	30821942140
+OrderedCount Read Bytes:	127929383856
+OrderedCount Writes:	790714258
+OrderedCount Write Bytes:	6185432360
+Total Number of Reads:	30821942140
+Total Number of Bytes Read:	127878389680
+Total Number of Writes:	790714258
+Total Number of Bytes Written:	6134438184
+Thread 14
+Function:	OrderedCount
+OrderedCount Reads:	38146737133
+OrderedCount Read Bytes:	159019250292
+OrderedCount Writes:	1095786878
+OrderedCount Write Bytes:	8572169384
+Total Number of Reads:	38146737133
+Total Number of Bytes Read:	158948318836
+Total Number of Writes:	1095786878
+Total Number of Bytes Written:	8501237928
+Thread 15
+Function:	OrderedCount
+OrderedCount Reads:	28078408830
+OrderedCount Read Bytes:	116075401848
+OrderedCount Writes:	642069160
+OrderedCount Write Bytes:	5013777808
+Total Number of Reads:	28078408830
+Total Number of Bytes Read:	116042795640
+Total Number of Writes:	642069160
+Total Number of Bytes Written:	4981171600
+Thread 16
+Function:	OrderedCount
+OrderedCount Reads:	73213698635
+OrderedCount Read Bytes:	304271713964
+OrderedCount Writes:	1954634196
+OrderedCount Write Bytes:	15220440592
+Total Number of Reads:	73213698635
+Total Number of Bytes Read:	304215004844
+Total Number of Writes:	1954634196
+Total Number of Bytes Written:	15163731472
+Thread 17
+Function:	OrderedCount
+OrderedCount Reads:	98251835002
+OrderedCount Read Bytes:	408382313256
+OrderedCount Writes:	2634520520
+OrderedCount Write Bytes:	20499977608
+Total Number of Reads:	98251835002
+Total Number of Bytes Read:	408320453416
+Total Number of Writes:	2634520520
+Total Number of Bytes Written:	20438117768
+Thread 18
+Function:	OrderedCount
+OrderedCount Reads:	63064034137
+OrderedCount Read Bytes:	269684771364
+OrderedCount Writes:	2988177367
+OrderedCount Write Bytes:	23238840752
+Total Number of Reads:	63064034137
+Total Number of Bytes Read:	269627541028
+Total Number of Writes:	2988177367
+Total Number of Bytes Written:	23181610416
+Thread 19
+Function:	OrderedCount
+OrderedCount Reads:	74927618269
+OrderedCount Read Bytes:	312513563524
+OrderedCount Writes:	2192963526
+OrderedCount Write Bytes:	17069675156
+Total Number of Reads:	74927618269
+Total Number of Bytes Read:	312456511636
+Total Number of Writes:	2192963526
+Total Number of Bytes Written:	17012623268
+Thread 0
+Function:	OrderedCount
+OrderedCount Reads:	40200010988
+OrderedCount Read Bytes:	164535754288
+OrderedCount Writes:	641936452
+OrderedCount Write Bytes:	4981576752
+Total Number of Reads:	40200010988
+Total Number of Bytes Read:	164534084144
+Total Number of Writes:	641936452
+Total Number of Bytes Written:	4979906608

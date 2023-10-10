@@ -1,0 +1,200 @@
+Thread 1
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	1489342546
+ShiloachVishkin Read Bytes:	10521421992
+ShiloachVishkin Writes:	497106942
+ShiloachVishkin Write Bytes:	4352270050
+Total Number of Reads:	1489342546
+Total Number of Bytes Read:	10078057368
+Total Number of Writes:	497106942
+Total Number of Bytes Written:	3908905426
+Thread 2
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	2073292550
+ShiloachVishkin Read Bytes:	14330976492
+ShiloachVishkin Writes:	650034180
+ShiloachVishkin Write Bytes:	5557091209
+Total Number of Reads:	2073292550
+Total Number of Bytes Read:	13887611868
+Total Number of Writes:	650034180
+Total Number of Bytes Written:	5113726585
+Thread 3
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	1692744640
+ShiloachVishkin Read Bytes:	11848262776
+ShiloachVishkin Writes:	550321052
+ShiloachVishkin Write Bytes:	4770969526
+Total Number of Reads:	1692744640
+Total Number of Bytes Read:	11404898152
+Total Number of Writes:	550321052
+Total Number of Bytes Written:	4327604902
+Thread 4
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	5950518000
+ShiloachVishkin Read Bytes:	39568406300
+ShiloachVishkin Writes:	1637072734
+ShiloachVishkin Write Bytes:	13461753719
+Total Number of Reads:	5950518000
+Total Number of Bytes Read:	39125041676
+Total Number of Writes:	1637072734
+Total Number of Bytes Written:	13018389095
+Thread 6
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	10200711524
+ShiloachVishkin Read Bytes:	67247808748
+ShiloachVishkin Writes:	2726193386
+ShiloachVishkin Write Bytes:	22161788079
+Total Number of Reads:	10200711524
+Total Number of Bytes Read:	66804444124
+Total Number of Writes:	2726193386
+Total Number of Bytes Written:	21718423455
+Thread 5
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	9095635536
+ShiloachVishkin Read Bytes:	60053245248
+ShiloachVishkin Writes:	2444139600
+ShiloachVishkin Write Bytes:	19916499666
+Total Number of Reads:	9095635536
+Total Number of Bytes Read:	59609880624
+Total Number of Writes:	2444139600
+Total Number of Bytes Written:	19473135042
+Thread 7
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	6438854630
+ShiloachVishkin Read Bytes:	42758110860
+ShiloachVishkin Writes:	1766915124
+ShiloachVishkin Write Bytes:	14497015989
+Total Number of Reads:	6438854630
+Total Number of Bytes Read:	42314746236
+Total Number of Writes:	1766915124
+Total Number of Bytes Written:	14053651365
+Thread 8
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	5422162796
+ShiloachVishkin Read Bytes:	36139433692
+ShiloachVishkin Writes:	1507652042
+ShiloachVishkin Write Bytes:	12424617927
+Total Number of Reads:	5422162796
+Total Number of Bytes Read:	35696069068
+Total Number of Writes:	1507652042
+Total Number of Bytes Written:	11981253303
+Thread 9
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	4830925206
+ShiloachVishkin Read Bytes:	32291238328
+ShiloachVishkin Writes:	1357267130
+ShiloachVishkin Write Bytes:	11217883166
+Total Number of Reads:	4830925206
+Total Number of Bytes Read:	31847873704
+Total Number of Writes:	1357267130
+Total Number of Bytes Written:	10774518542
+Thread 10
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	3662379765
+ShiloachVishkin Read Bytes:	24683914696
+ShiloachVishkin Writes:	1059241637
+ShiloachVishkin Write Bytes:	8829853813
+Total Number of Reads:	3662379765
+Total Number of Bytes Read:	24240550072
+Total Number of Writes:	1059241637
+Total Number of Bytes Written:	8386489189
+Thread 11
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	4226664544
+ShiloachVishkin Read Bytes:	28358960712
+ShiloachVishkin Writes:	1203910308
+ShiloachVishkin Write Bytes:	9988938504
+Total Number of Reads:	4226664544
+Total Number of Bytes Read:	27915596088
+Total Number of Writes:	1203910308
+Total Number of Bytes Written:	9545573880
+Thread 12
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	4278253595
+ShiloachVishkin Read Bytes:	28692215284
+ShiloachVishkin Writes:	1215770441
+ShiloachVishkin Write Bytes:	10087887440
+Total Number of Reads:	4278253595
+Total Number of Bytes Read:	28248850660
+Total Number of Writes:	1215770441
+Total Number of Bytes Written:	9644522816
+Thread 14
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	4082693955
+ShiloachVishkin Read Bytes:	27417972620
+ShiloachVishkin Writes:	1165328029
+ShiloachVishkin Write Bytes:	9687522876
+Total Number of Reads:	4082693955
+Total Number of Bytes Read:	26974607996
+Total Number of Writes:	1165328029
+Total Number of Bytes Written:	9244158252
+Thread 13
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	4374179271
+ShiloachVishkin Read Bytes:	29318510396
+ShiloachVishkin Writes:	1241140969
+ShiloachVishkin Write Bytes:	10288880518
+Total Number of Reads:	4374179271
+Total Number of Bytes Read:	28875145772
+Total Number of Writes:	1241140969
+Total Number of Bytes Written:	9845515894
+Thread 15
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	5900881407
+ShiloachVishkin Read Bytes:	39267435732
+ShiloachVishkin Writes:	1635497325
+ShiloachVishkin Write Bytes:	13427517706
+Total Number of Reads:	5900881407
+Total Number of Bytes Read:	38824071252
+Total Number of Writes:	1635497325
+Total Number of Bytes Written:	12984153226
+Thread 16
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	5036188109
+ShiloachVishkin Read Bytes:	33649452076
+ShiloachVishkin Writes:	1420585391
+ShiloachVishkin Write Bytes:	11676148886
+Total Number of Reads:	5036188109
+Total Number of Bytes Read:	33206087596
+Total Number of Writes:	1420585391
+Total Number of Bytes Written:	11232784406
+Thread 17
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	4911286258
+ShiloachVishkin Read Bytes:	32836706772
+ShiloachVishkin Writes:	1388918292
+ShiloachVishkin Write Bytes:	11422900431
+Total Number of Reads:	4911286258
+Total Number of Bytes Read:	32393342292
+Total Number of Writes:	1388918292
+Total Number of Bytes Written:	10979535951
+Thread 19
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	3807873838
+ShiloachVishkin Read Bytes:	25638904568
+ShiloachVishkin Writes:	1100254450
+ShiloachVishkin Write Bytes:	9141356450
+Total Number of Reads:	3807873838
+Total Number of Bytes Read:	25195540088
+Total Number of Writes:	1100254450
+Total Number of Bytes Written:	8697991970
+Thread 18
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	2504831854
+ShiloachVishkin Read Bytes:	17148342348
+ShiloachVishkin Writes:	764099292
+ShiloachVishkin Write Bytes:	6464200595
+Total Number of Reads:	2504831854
+Total Number of Bytes Read:	16704977868
+Total Number of Writes:	764099292
+Total Number of Bytes Written:	6020836115
+Thread 0
+Function:	ShiloachVishkin
+ShiloachVishkin Reads:	2499577888
+ShiloachVishkin Read Bytes:	17106085404
+ShiloachVishkin Writes:	758732622
+ShiloachVishkin Write Bytes:	6422019131
+Total Number of Reads:	2499577888
+Total Number of Bytes Read:	16662720780
+Total Number of Writes:	758732622
+Total Number of Bytes Written:	5978654507

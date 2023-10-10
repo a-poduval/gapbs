@@ -1,0 +1,200 @@
+Thread 1
+Function:	RelaxEdges
+RelaxEdges Reads:	844920406
+RelaxEdges Read Bytes:	5419256502
+RelaxEdges Writes:	458851394
+RelaxEdges Write Bytes:	2959602918
+Total Number of Reads:	844920406
+Total Number of Bytes Read:	5394873846
+Total Number of Writes:	458851394
+Total Number of Bytes Written:	2935220262
+Thread 2
+Function:	RelaxEdges
+RelaxEdges Reads:	790457767
+RelaxEdges Read Bytes:	5095172992
+RelaxEdges Writes:	422301992
+RelaxEdges Write Bytes:	2744397285
+Total Number of Reads:	790457767
+Total Number of Bytes Read:	5069703056
+Total Number of Writes:	422301992
+Total Number of Bytes Written:	2718927349
+Thread 3
+Function:	RelaxEdges
+RelaxEdges Reads:	800447067
+RelaxEdges Read Bytes:	5146576521
+RelaxEdges Writes:	432810457
+RelaxEdges Write Bytes:	2802279998
+Total Number of Reads:	800447067
+Total Number of Bytes Read:	5121108137
+Total Number of Writes:	432810457
+Total Number of Bytes Written:	2776811614
+Thread 4
+Function:	RelaxEdges
+RelaxEdges Reads:	880741701
+RelaxEdges Read Bytes:	5671892808
+RelaxEdges Writes:	470986771
+RelaxEdges Write Bytes:	3056193302
+Total Number of Reads:	880741701
+Total Number of Bytes Read:	5644550984
+Total Number of Writes:	470986771
+Total Number of Bytes Written:	3028851478
+Thread 5
+Function:	RelaxEdges
+RelaxEdges Reads:	860831353
+RelaxEdges Read Bytes:	5531232420
+RelaxEdges Writes:	467107827
+RelaxEdges Write Bytes:	3021579111
+Total Number of Reads:	860831353
+Total Number of Bytes Read:	5503800868
+Total Number of Writes:	467107827
+Total Number of Bytes Written:	2994147559
+Thread 7
+Function:	RelaxEdges
+RelaxEdges Reads:	953077665
+RelaxEdges Read Bytes:	6118895437
+RelaxEdges Writes:	514051042
+RelaxEdges Write Bytes:	3319893893
+Total Number of Reads:	953077665
+Total Number of Bytes Read:	6091818557
+Total Number of Writes:	514051042
+Total Number of Bytes Written:	3292817013
+Thread 6
+Function:	RelaxEdges
+RelaxEdges Reads:	897528861
+RelaxEdges Read Bytes:	5782042059
+RelaxEdges Writes:	480544885
+RelaxEdges Write Bytes:	3120229357
+Total Number of Reads:	897528861
+Total Number of Bytes Read:	5753284779
+Total Number of Writes:	480544885
+Total Number of Bytes Written:	3091472077
+Thread 8
+Function:	RelaxEdges
+RelaxEdges Reads:	756421910
+RelaxEdges Read Bytes:	4888668556
+RelaxEdges Writes:	402372714
+RelaxEdges Write Bytes:	2626252106
+Total Number of Reads:	756421910
+Total Number of Bytes Read:	4862218284
+Total Number of Writes:	402372714
+Total Number of Bytes Written:	2599801834
+Thread 9
+Function:	RelaxEdges
+RelaxEdges Reads:	814249039
+RelaxEdges Read Bytes:	5237970968
+RelaxEdges Writes:	439571407
+RelaxEdges Write Bytes:	2848262901
+Total Number of Reads:	814249039
+Total Number of Bytes Read:	5211772664
+Total Number of Writes:	439571407
+Total Number of Bytes Written:	2822064597
+Thread 10
+Function:	RelaxEdges
+RelaxEdges Reads:	762043228
+RelaxEdges Read Bytes:	4906467571
+RelaxEdges Writes:	407592938
+RelaxEdges Write Bytes:	2643928664
+Total Number of Reads:	762043228
+Total Number of Bytes Read:	4883105011
+Total Number of Writes:	407592938
+Total Number of Bytes Written:	2620566104
+Thread 11
+Function:	RelaxEdges
+RelaxEdges Reads:	771187239
+RelaxEdges Read Bytes:	4963217549
+RelaxEdges Writes:	416497847
+RelaxEdges Write Bytes:	2700856828
+Total Number of Reads:	771187239
+Total Number of Bytes Read:	4937803389
+Total Number of Writes:	416497847
+Total Number of Bytes Written:	2675442668
+Thread 12
+Function:	RelaxEdges
+RelaxEdges Reads:	960562932
+RelaxEdges Read Bytes:	6161337787
+RelaxEdges Writes:	523109167
+RelaxEdges Write Bytes:	3375640410
+Total Number of Reads:	960562932
+Total Number of Bytes Read:	6133858091
+Total Number of Writes:	523109167
+Total Number of Bytes Written:	3348160714
+Thread 13
+Function:	RelaxEdges
+RelaxEdges Reads:	772943610
+RelaxEdges Read Bytes:	4973566066
+RelaxEdges Writes:	414386225
+RelaxEdges Write Bytes:	2685407839
+Total Number of Reads:	772943610
+Total Number of Bytes Read:	4950026354
+Total Number of Writes:	414386225
+Total Number of Bytes Written:	2661868127
+Thread 14
+Function:	RelaxEdges
+RelaxEdges Reads:	823546047
+RelaxEdges Read Bytes:	5289080257
+RelaxEdges Writes:	446628131
+RelaxEdges Write Bytes:	2886886331
+Total Number of Reads:	823546047
+Total Number of Bytes Read:	5264014193
+Total Number of Writes:	446628131
+Total Number of Bytes Written:	2861820267
+Thread 15
+Function:	RelaxEdges
+RelaxEdges Reads:	779622090
+RelaxEdges Read Bytes:	5011497501
+RelaxEdges Writes:	420255740
+RelaxEdges Write Bytes:	2720111591
+Total Number of Reads:	779622090
+Total Number of Bytes Read:	4988706349
+Total Number of Writes:	420255740
+Total Number of Bytes Written:	2697320439
+Thread 16
+Function:	RelaxEdges
+RelaxEdges Reads:	1190745288
+RelaxEdges Read Bytes:	7663235853
+RelaxEdges Writes:	643833553
+RelaxEdges Write Bytes:	4175995941
+Total Number of Reads:	1190745288
+Total Number of Bytes Read:	7624594589
+Total Number of Writes:	643833553
+Total Number of Bytes Written:	4137354677
+Thread 17
+Function:	RelaxEdges
+RelaxEdges Reads:	1215103455
+RelaxEdges Read Bytes:	7807218829
+RelaxEdges Writes:	661368261
+RelaxEdges Write Bytes:	4279901509
+Total Number of Reads:	1215103455
+Total Number of Bytes Read:	7769399485
+Total Number of Writes:	661368261
+Total Number of Bytes Written:	4242082165
+Thread 18
+Function:	RelaxEdges
+RelaxEdges Reads:	1135099994
+RelaxEdges Read Bytes:	7296465677
+RelaxEdges Writes:	614508040
+RelaxEdges Write Bytes:	3977962517
+Total Number of Reads:	1135099994
+Total Number of Bytes Read:	7261133741
+Total Number of Writes:	614508040
+Total Number of Bytes Written:	3942630581
+Thread 19
+Function:	RelaxEdges
+RelaxEdges Reads:	1145045946
+RelaxEdges Read Bytes:	7366496077
+RelaxEdges Writes:	616804371
+RelaxEdges Write Bytes:	3997109476
+Total Number of Reads:	1145045946
+Total Number of Bytes Read:	7330503133
+Total Number of Writes:	616804371
+Total Number of Bytes Written:	3961116532
+Thread 0
+Function:	RelaxEdges
+RelaxEdges Reads:	844642724
+RelaxEdges Read Bytes:	5423152968
+RelaxEdges Writes:	459171170
+RelaxEdges Write Bytes:	2966880071
+Total Number of Reads:	844642724
+Total Number of Bytes Read:	5396910696
+Total Number of Writes:	459171170
+Total Number of Bytes Written:	2940637799

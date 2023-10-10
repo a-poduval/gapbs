@@ -1,0 +1,200 @@
+Thread 1
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8616463044
+PageRankPullGS Read Bytes:	53220130096
+PageRankPullGS Writes:	3895360859
+PageRankPullGS Write Bytes:	26082060960
+Total Number of Reads:	8616463044
+Total Number of Bytes Read:	52281937056
+Total Number of Writes:	3895360859
+Total Number of Bytes Written:	25143867920
+Thread 2
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8123641459
+PageRankPullGS Read Bytes:	49263641860
+PageRankPullGS Writes:	3589442465
+PageRankPullGS Write Bytes:	23593812036
+Total Number of Reads:	8123641459
+Total Number of Bytes Read:	48543028340
+Total Number of Writes:	3589442465
+Total Number of Bytes Written:	22873198516
+Thread 3
+Function:	PageRankPullGS
+PageRankPullGS Reads:	9241010844
+PageRankPullGS Read Bytes:	56381660240
+PageRankPullGS Writes:	4114640203
+PageRankPullGS Write Bytes:	27214498368
+Total Number of Reads:	9241010844
+Total Number of Bytes Read:	55504546752
+Total Number of Writes:	4114640203
+Total Number of Bytes Written:	26337384880
+Thread 4
+Function:	PageRankPullGS
+PageRankPullGS Reads:	9507463429
+PageRankPullGS Read Bytes:	56603575964
+PageRankPullGS Writes:	4105746805
+PageRankPullGS Write Bytes:	26468291388
+Total Number of Reads:	9507463429
+Total Number of Bytes Read:	55957411340
+Total Number of Writes:	4105746805
+Total Number of Bytes Written:	25822126764
+Thread 5
+Function:	PageRankPullGS
+PageRankPullGS Reads:	10512178959
+PageRankPullGS Read Bytes:	60919394004
+PageRankPullGS Writes:	4388488569
+PageRankPullGS Write Bytes:	27449875284
+Total Number of Reads:	10512178959
+Total Number of Bytes Read:	60511518276
+Total Number of Writes:	4388488569
+Total Number of Bytes Written:	27041999556
+Thread 6
+Function:	PageRankPullGS
+PageRankPullGS Reads:	9327529534
+PageRankPullGS Read Bytes:	54077739176
+PageRankPullGS Writes:	3895754431
+PageRankPullGS Write Bytes:	24380224248
+Total Number of Reads:	9327529534
+Total Number of Bytes Read:	53707612184
+Total Number of Writes:	3895754431
+Total Number of Bytes Written:	24010097256
+Thread 7
+Function:	PageRankPullGS
+PageRankPullGS Reads:	10063562739
+PageRankPullGS Read Bytes:	59094877956
+PageRankPullGS Writes:	4271563425
+PageRankPullGS Write Bytes:	27123452484
+Total Number of Reads:	10063562739
+Total Number of Bytes Read:	58561959540
+Total Number of Writes:	4271563425
+Total Number of Bytes Written:	26590534068
+Thread 8
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8680710699
+PageRankPullGS Read Bytes:	51402811044
+PageRankPullGS Writes:	3723141201
+PageRankPullGS Write Bytes:	23861230692
+Total Number of Reads:	8680710699
+Total Number of Bytes Read:	50860455444
+Total Number of Writes:	3723141201
+Total Number of Bytes Written:	23318875092
+Thread 9
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8610890744
+PageRankPullGS Read Bytes:	51301619488
+PageRankPullGS Writes:	3721558691
+PageRankPullGS Write Bytes:	24009808464
+Total Number of Reads:	8610890744
+Total Number of Bytes Read:	50706572944
+Total Number of Writes:	3721558691
+Total Number of Bytes Written:	23414761920
+Thread 10
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8684985949
+PageRankPullGS Read Bytes:	52564326332
+PageRankPullGS Writes:	3828267109
+PageRankPullGS Write Bytes:	25112480988
+Total Number of Reads:	8684985949
+Total Number of Bytes Read:	51815139116
+Total Number of Writes:	3828267109
+Total Number of Bytes Written:	24363293772
+Thread 11
+Function:	PageRankPullGS
+PageRankPullGS Reads:	7959287484
+PageRankPullGS Read Bytes:	47798262224
+PageRankPullGS Writes:	3474155659
+PageRankPullGS Write Bytes:	22604819904
+Total Number of Reads:	7959287484
+Total Number of Bytes Read:	47176739136
+Total Number of Writes:	3474155659
+Total Number of Bytes Written:	21983296816
+Thread 12
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8502325984
+PageRankPullGS Read Bytes:	50974806272
+PageRankPullGS Writes:	3703691827
+PageRankPullGS Write Bytes:	24055961520
+Total Number of Reads:	8502325984
+Total Number of Bytes Read:	50328641648
+Total Number of Writes:	3703691827
+Total Number of Bytes Written:	23409796896
+Thread 13
+Function:	PageRankPullGS
+PageRankPullGS Reads:	9145729034
+PageRankPullGS Read Bytes:	54933985976
+PageRankPullGS Writes:	3993427831
+PageRankPullGS Write Bytes:	25988626248
+Total Number of Reads:	9145729034
+Total Number of Bytes Read:	54223071784
+Total Number of Writes:	3993427831
+Total Number of Bytes Written:	25277712056
+Thread 14
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8665630679
+PageRankPullGS Read Bytes:	51977261876
+PageRankPullGS Writes:	3777009097
+PageRankPullGS Write Bytes:	24543837492
+Total Number of Reads:	8665630679
+Total Number of Bytes Read:	51315106468
+Total Number of Writes:	3777009097
+Total Number of Bytes Written:	23881682084
+Thread 15
+Function:	PageRankPullGS
+PageRankPullGS Reads:	8123133560
+PageRankPullGS Read Bytes:	47999229600
+PageRankPullGS Writes:	3474551304
+PageRankPullGS Write Bytes:	22216337056
+Total Number of Reads:	8123133560
+Total Number of Bytes Read:	47507992096
+Total Number of Writes:	3474551304
+Total Number of Bytes Written:	21725099552
+Thread 16
+Function:	PageRankPullGS
+PageRankPullGS Reads:	12312738665
+PageRankPullGS Read Bytes:	73134938700
+PageRankPullGS Writes:	5302567938
+PageRankPullGS Write Bytes:	34097484412
+Total Number of Reads:	12312738665
+Total Number of Bytes Read:	72339352012
+Total Number of Writes:	5302567938
+Total Number of Bytes Written:	33301897724
+Thread 17
+Function:	PageRankPullGS
+PageRankPullGS Reads:	14259653120
+PageRankPullGS Read Bytes:	84501916672
+PageRankPullGS Writes:	6123538904
+PageRankPullGS Write Bytes:	39276541312
+Total Number of Reads:	14259653120
+Total Number of Bytes Read:	83621919616
+Total Number of Writes:	6123538904
+Total Number of Bytes Written:	38396544256
+Thread 18
+Function:	PageRankPullGS
+PageRankPullGS Reads:	12605648150
+PageRankPullGS Read Bytes:	75310782832
+PageRankPullGS Writes:	5468418188
+PageRankPullGS Write Bytes:	35384704648
+Total Number of Reads:	12605648150
+Total Number of Bytes Read:	74417823232
+Total Number of Writes:	5468418188
+Total Number of Bytes Written:	34491745048
+Thread 19
+Function:	PageRankPullGS
+PageRankPullGS Reads:	12801312990
+PageRankPullGS Read Bytes:	78016886664
+PageRankPullGS Writes:	5693082372
+PageRankPullGS Write Bytes:	37611079240
+Total Number of Reads:	12801312990
+Total Number of Bytes Read:	76831130568
+Total Number of Writes:	5693082372
+Total Number of Bytes Written:	36425323144
+Thread 0
+Function:	PageRankPullGS
+PageRankPullGS Reads:	7160377424
+PageRankPullGS Read Bytes:	42808204352
+PageRankPullGS Writes:	3107667859
+PageRankPullGS Write Bytes:	20124350448
+Total Number of Reads:	7160377424
+Total Number of Bytes Read:	42280528816
+Total Number of Writes:	3107667859
+Total Number of Bytes Written:	19596674912

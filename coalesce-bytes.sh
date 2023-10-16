@@ -1,8 +1,6 @@
 #!/bin/bash
 
-if [ ! -f ./zray-byte-stats.csv ]; then
-    echo "Name,Function,Time Elapsed (ns),Read Bytes,Written Bytes" >> zray-byte-stats.csv
-fi
+echo "Name,Function,Time Elapsed (ns),Read Bytes,Written Bytes,Total Instructions,Counter Instructions,Counter Increments Contributing to Overhead" > zray-byte-stats.csv
 
 kernels=("bc" "bfs" "cc" "cc_sv" "pr" "pr_spmv" "sssp" "tc")
 
@@ -16,5 +14,8 @@ for i in $(seq 0 7); do
     TIME_ELAPSED=$(grep "TIME ELAPSED (ns)" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
     READ_BYTES=$(grep "READ BYTES" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
     WRITE_BYTES=$(grep "WRITTEN BYTES" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
-    echo ${kernels[$i]},${functions[$i]},$TIME_ELAPSED,$READ_BYTES,$WRITE_BYTES>> ../zray-byte-stats.csv
+    TOTAL_INST=$(grep "TOTAL INST" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
+    CNTR_INST=$(grep "COUNTER INST" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
+    OVERHEAD=$(grep "OVERHEAD INCREMENTS" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
+    echo ${kernels[$i]},${functions[$i]},$TIME_ELAPSED,$READ_BYTES,$WRITE_BYTES,$TOTAL_INST,$CNTR_INST,$OVERHEAD >> ../zray-byte-stats.csv
 done

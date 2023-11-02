@@ -68,7 +68,6 @@ const size_t kBinSizeThreshold = 1000;
 inline
 void RelaxEdges(const WGraph &g, NodeID u, WeightT delta,
                 pvector<WeightT> &dist, vector <vector<NodeID>> &local_bins) {
-  custom_roi_begin("RelaxEdges"); 
   for (WNode wn : g.out_neigh(u)) {
     WeightT old_dist = dist[wn.v];
     WeightT new_dist = dist[u] + wn.w;
@@ -83,7 +82,6 @@ void RelaxEdges(const WGraph &g, NodeID u, WeightT delta,
       old_dist = dist[wn.v];      // swap failed, recheck dist update & retry
     }
   }
-  custom_roi_end("RelaxEdges");
 }
 
 pvector<WeightT> DeltaStep(const WGraph &g, NodeID source, WeightT delta) {

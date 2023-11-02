@@ -34,7 +34,6 @@ const float kDamp = 0.85;
 
 pvector<ScoreT> PageRankPull(const Graph &g, int max_iters,
                              double epsilon = 0) {
-#pragma begin_instrument 1
   const ScoreT init_score = 1.0f / g.num_nodes();
   const ScoreT base_score = (1.0f - kDamp) / g.num_nodes();
   pvector<ScoreT> scores(g.num_nodes(), init_score);
@@ -57,7 +56,6 @@ pvector<ScoreT> PageRankPull(const Graph &g, int max_iters,
     if (error < epsilon)
       break;
   }
-#pragma end_instrument 1
   return scores;
 }
 
@@ -100,6 +98,7 @@ int main(int argc, char* argv[]) {
   CLPageRank cli(argc, argv, "pagerank", 1e-4, 20);
   if (!cli.ParseArgs())
     return -1;
+#pragma begin_instrument 0
   Builder b(cli);
   Graph g = b.MakeGraph();
   auto PRBound = [&cli] (const Graph &g) {
@@ -109,5 +108,6 @@ int main(int argc, char* argv[]) {
     return PRVerifier(g, scores, cli.tolerance());
   };
   BenchmarkKernel(cli, g, PRBound, PrintTopScores, VerifierBound);
+#pragma end_instrument 0
   return 0;
 }

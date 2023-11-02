@@ -68,7 +68,6 @@ const size_t kBinSizeThreshold = 1000;
 inline
 void RelaxEdges(const WGraph &g, NodeID u, WeightT delta,
                 pvector<WeightT> &dist, vector <vector<NodeID>> &local_bins) {
-#pragma begin_instrument 1
   for (WNode wn : g.out_neigh(u)) {
     WeightT old_dist = dist[wn.v];
     WeightT new_dist = dist[u] + wn.w;
@@ -83,7 +82,6 @@ void RelaxEdges(const WGraph &g, NodeID u, WeightT delta,
       old_dist = dist[wn.v];      // swap failed, recheck dist update & retry
     }
   }
-#pragma end_instrument 1
 }
 
 pvector<WeightT> DeltaStep(const WGraph &g, NodeID source, WeightT delta) {
@@ -197,6 +195,7 @@ int main(int argc, char* argv[]) {
   CLDelta<WeightT> cli(argc, argv, "single-source shortest-path");
   if (!cli.ParseArgs())
     return -1;
+#pragma begin_instrument 0
   WeightedBuilder b(cli);
   WGraph g = b.MakeGraph();
   SourcePicker<WGraph> sp(g, cli.start_vertex());
@@ -208,5 +207,6 @@ int main(int argc, char* argv[]) {
     return SSSPVerifier(g, vsp.PickNext(), dist);
   };
   BenchmarkKernel(cli, g, SSSPBound, PrintSSSPStats, VerifierBound);
+#pragma end_instrument 0
   return 0;
 }

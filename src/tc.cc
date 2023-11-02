@@ -50,7 +50,6 @@ to relabel the graph, we use the heuristic in WorthRelabelling.
 using namespace std;
 
 size_t OrderedCount(const Graph &g) {
-#pragma begin_instrument 1
   size_t total = 0;
   // #pragma omp parallel for reduction(+ : total) schedule(dynamic, 64)
   for (NodeID u=0; u < g.num_nodes(); u++) {
@@ -68,7 +67,6 @@ size_t OrderedCount(const Graph &g) {
       }
     }
   }
-#pragma end_instrument 1
   return total;
 }
 
@@ -134,6 +132,7 @@ int main(int argc, char* argv[]) {
   CLApp cli(argc, argv, "triangle count");
   if (!cli.ParseArgs())
     return -1;
+#pragma begin_instrument 0
   Builder b(cli);
   Graph g = b.MakeGraph();
   if (g.directed()) {
@@ -141,5 +140,6 @@ int main(int argc, char* argv[]) {
     return -2;
   }
   BenchmarkKernel(cli, g, Hybrid, PrintTriangleStats, TCVerifier);
+#pragma end_instrument 0
   return 0;
 }

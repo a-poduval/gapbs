@@ -48,7 +48,6 @@ using namespace std;
 // direction, so we use a min-max swap such that lower component IDs propagate
 // independent of the edge's direction.
 pvector<NodeID> ShiloachVishkin(const Graph &g) {
-#pragma begin_instrument 1
   pvector<NodeID> comp(g.num_nodes());
   // #pragma omp parallel for
   for (NodeID n=0; n < g.num_nodes(); n++)
@@ -81,7 +80,6 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
     }
   }
   cout << "Shiloach-Vishkin took " << num_iter << " iterations" << endl;
-#pragma end_instrument 1
   return comp;
 }
 
@@ -156,8 +154,10 @@ int main(int argc, char* argv[]) {
   CLApp cli(argc, argv, "connected-components");
   if (!cli.ParseArgs())
     return -1;
+  #pragma begin_instrument 0
   Builder b(cli);
   Graph g = b.MakeGraph();
   BenchmarkKernel(cli, g, ShiloachVishkin, PrintCompStats, CCVerifier);
+  #pragma end_instrument 0
   return 0;
 }

@@ -45,7 +45,6 @@ using namespace std;
 
 int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
                Bitmap &next) {
-#pragma begin_instrument 1
   int64_t awake_count = 0;
   next.reset();
   // #pragma omp parallel for reduction(+ : awake_count) schedule(dynamic, 1024)
@@ -61,7 +60,6 @@ int64_t BUStep(const Graph &g, pvector<NodeID> &parent, Bitmap &front,
       }
     }
   }
-#pragma end_instrument 1
   return awake_count;
 }
 
@@ -247,6 +245,7 @@ int main(int argc, char* argv[]) {
   CLApp cli(argc, argv, "breadth-first search");
   if (!cli.ParseArgs())
     return -1;
+  #pragma begin_instrument 0
   Builder b(cli);
   Graph g = b.MakeGraph();
   SourcePicker<Graph> sp(g, cli.start_vertex());
@@ -256,5 +255,6 @@ int main(int argc, char* argv[]) {
     return BFSVerifier(g, vsp.PickNext(), parent);
   };
   BenchmarkKernel(cli, g, BFSBound, PrintBFSStats, VerifierBound);
+  #pragma end_instrument 0
   return 0;
 }

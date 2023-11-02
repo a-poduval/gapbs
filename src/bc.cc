@@ -51,7 +51,6 @@ typedef double CountT;
 void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
     Bitmap &succ, vector<SlidingQueue<NodeID>::iterator> &depth_index,
     SlidingQueue<NodeID> &queue) {
-#pragma begin_instrument 1
   pvector<NodeID> depths(g.num_nodes(), -1);
   depths[source] = 0;
   path_counts[source] = 1;
@@ -90,7 +89,6 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
     }
   }
   depth_index.push_back(queue.begin());
-#pragma end_instrument 1
 }
 
 
@@ -232,6 +230,7 @@ int main(int argc, char* argv[]) {
   CLIterApp cli(argc, argv, "betweenness-centrality", 1);
   if (!cli.ParseArgs())
     return -1;
+  #pragma begin_instrument 0
   if (cli.num_iters() > 1 && cli.start_vertex() != -1)
     cout << "Warning: iterating from same source (-r & -i)" << endl;
   Builder b(cli);
@@ -245,5 +244,6 @@ int main(int argc, char* argv[]) {
     return BCVerifier(g, vsp, cli.num_iters(), scores);
   };
   BenchmarkKernel(cli, g, BCBound, PrintTopScores, VerifierBound);
+  #pragma end_instrument 0
   return 0;
 }

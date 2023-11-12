@@ -1,7 +1,7 @@
 # See LICENSE.txt for license details.
 CXX=$(CUSTOM_CC)
 
-CXX_FLAGS += -std=c++11 -O2 -Wall -fno-inline -fxray-instrument
+CXX_FLAGS += -std=c++11 -O2 -Wall -fno-inline
 PAR_FLAG = -fopenmp=libomp
 
 ifneq (,$(findstring icpc,$(CXX)))

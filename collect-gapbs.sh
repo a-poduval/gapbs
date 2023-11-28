@@ -8,12 +8,13 @@ fi
 kernels=("bc" "bfs" "cc" "cc_sv" "pr" "pr_spmv" "sssp" "tc")
 
 BASE_DIR=$(pwd)
-make clean
+#make clean
 make
 
 for i in $(seq 0 7); do
     cd $BASE_DIR
     cd ${kernels[$i]}
+    rm tool_log_file.txt
     if [ $i -eq 6 ]
     then
         TOOL_INST=true XRAY_OPTIONS="patch_premain=true" /usr/bin/time -f "Time: %e\nMax RSS: %M\nAvg data+stack+text mem use: %K" -o time-${kernels[$i]}.txt ./${kernels[$i]} -f ../../graphs/raw/twitter.wsg

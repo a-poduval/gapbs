@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Name,Function,Time Elapsed (ns),Max Thread Time Elapsed,Read Bytes,Written Bytes,Total Instructions,Counter Instructions,Counter Increments Contributing to Overhead" > zray-byte-stats.csv
+#echo "Name,Function,Time Elapsed (ns),Max Thread Time Elapsed,Read Bytes,Written Bytes,Total Instructions,Counter Instructions,Counter Increments Contributing to Overhead" > zray-byte-stats.csv
 
 kernels=("bc" "bfs" "cc" "cc_sv" "pr" "pr_spmv" "sssp" "tc")
 

@@ -13,8 +13,8 @@ for i in $(seq 0 7); do
     cd ${kernels[$i]}
     TIME_ELAPSED=$(grep "TIME ELAPSED (ns)" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
     MAX_THREAD_TIME=$(grep "TIME ELAPSED (ns)" tool_log_file.txt | grep -o '\w*$' | sort -n | tail -1)
-    READ_BYTES=$(grep "READ BYTES" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
-    WRITE_BYTES=$(grep "WRITTEN BYTES" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
+    READ_BYTES=$(grep "HEAP READ BYTES" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
+    WRITE_BYTES=$(grep "HEAP WRITTEN BYTES" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
     TOTAL_INST=$(grep "TOTAL INST" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
     CNTR_INST=$(grep "COUNTER INST" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)
     OVERHEAD=$(grep "OVERHEAD INCREMENTS" tool_log_file.txt | grep -o '\w*$' | paste -sd+ - | bc)

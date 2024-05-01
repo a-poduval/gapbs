@@ -8,7 +8,7 @@ fi
 kernels=("bc" "bfs" "cc" "cc_sv" "pr" "pr_spmv" "sssp" "tc")
 
 BASE_DIR=$(pwd)
-#make clean
+make clean
 make
 
 for i in $(seq 0 7); do
@@ -17,13 +17,13 @@ for i in $(seq 0 7); do
     rm tool_log_file.txt
     if [ $i -eq 6 ]
     then
-        TOOL_INST=true XRAY_OPTIONS="patch_premain=true" /usr/bin/time -f "Time: %e\nMax RSS: %M\nAvg data+stack+text mem use: %K" -o time-${kernels[$i]}.txt ./${kernels[$i]} -f ../../graphs/raw/twitter.wsg
+        /usr/bin/time -f "Time: %e\nMax RSS: %M\nAvg data+stack+text mem use: %K" -o time-${kernels[$i]}.txt ./${kernels[$i]} -f ../../graphs/raw/twitter.wsg
     else
-        TOOL_INST=true XRAY_OPTIONS="patch_premain=true" /usr/bin/time -f "Time: %e\nMax RSS: %M\nAvg data+stack+text mem use: %K" -o time-${kernels[$i]}.txt ./${kernels[$i]}
+        /usr/bin/time -f "Time: %e\nMax RSS: %M\nAvg data+stack+text mem use: %K" -o time-${kernels[$i]}.txt ./${kernels[$i]}
     fi
-    wait
-    LD_CNT=$(grep "TOTAL LOAD" tool_log_file.txt | cut -c 1-14 --complement | paste -sd+ - | bc)
-    ST_CNT=$(grep "TOTAL STORES" tool_log_file.txt | cut -c 1-14 --complement | paste -sd+ - | bc)
+    #wait
+    LD_CNT=$(grep "TOTAL HEAP LOAD" tool_log_file.txt | cut -c 1-19 --complement | paste -sd+ - | bc)
+    ST_CNT=$(grep "TOTAL HEAP STORES" tool_log_file.txt | cut -c 1-19 --complement | paste -sd+ - | bc)
     #PP_TIME=$(grep "TOTAL POSTPROCESS TIME" tool_log_file.txt | cut -c 1-24 --complement | paste -sd+ - | bc) # bc summation throwing an error because it doesn't handle scientific notation
     TIME=$(grep "Time" time-${kernels[$i]}.txt | cut -c 1-6 --complement)
     MAX_RSS=$(grep "Max RSS" time-${kernels[$i]}.txt | cut -c 1-9 --complement)

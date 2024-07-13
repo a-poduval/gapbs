@@ -61,12 +61,12 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
   #pragma omp parallel
   {
     NodeID depth = 0;
+    custom_roi_begin("PBFS");
     QueueBuffer<NodeID> lqueue(queue);
     while (!queue.empty()) {
       depth++;
       #pragma omp for schedule(dynamic, 64) nowait
       for (auto q_iter = queue.begin(); q_iter < queue.end(); q_iter++) {
-        custom_roi_begin("PBFS"); 
         NodeID u = *q_iter;
         for (NodeID &v : g.out_neigh(u)) {
           if ((depths[v] == -1) &&
@@ -79,7 +79,6 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
             path_counts[v] += path_counts[u];
           }
         }
-        custom_roi_end("PBFS");
       }
       lqueue.flush();
       #pragma omp barrier
@@ -89,6 +88,7 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
         queue.slide_window();
       }
     }
+    custom_roi_end("PBFS");
   }
   depth_index.push_back(queue.begin());
 }

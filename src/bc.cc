@@ -61,7 +61,7 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
   #pragma omp parallel
   {
     NodeID depth = 0;
-    #pragma begin_instrument 1
+    asm volatile("#TOOL_PASS_BEGIN 1");
     QueueBuffer<NodeID> lqueue(queue);
     while (!queue.empty()) {
       depth++;
@@ -88,7 +88,7 @@ void PBFS(const Graph &g, NodeID source, pvector<CountT> &path_counts,
         queue.slide_window();
       }
     }
-    #pragma end_instrument 1
+    asm volatile("#TOOL_PASS_END 1");
   }
   depth_index.push_back(queue.begin());
 }

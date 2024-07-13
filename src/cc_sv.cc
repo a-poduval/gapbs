@@ -51,9 +51,9 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
   pvector<NodeID> comp(g.num_nodes());
   #pragma omp parallel for
   for (NodeID n=0; n < g.num_nodes(); n++) {
-    #pragma begin_instrument 1
+    asm volatile("#TOOL_PASS_BEGIN 1");
     comp[n] = n;
-    #pragma end_instrument 1
+    asm volatile("#TOOL_PASS_END 1");
   }
   bool change = true;
   int num_iter = 0;
@@ -62,7 +62,7 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
     num_iter++;
     #pragma omp parallel for
     for (NodeID u=0; u < g.num_nodes(); u++) {
-      #pragma begin_instrument 1
+      asm volatile("#TOOL_PASS_BEGIN 1");
       for (NodeID v : g.out_neigh(u)) {
         NodeID comp_u = comp[u];
         NodeID comp_v = comp[v];
@@ -75,15 +75,15 @@ pvector<NodeID> ShiloachVishkin(const Graph &g) {
           comp[high_comp] = low_comp;
         }
       }
-      #pragma end_instrument 1
+      asm volatile("#TOOL_PASS_END 1");
     }
     #pragma omp parallel for
     for (NodeID n=0; n < g.num_nodes(); n++) {
-      #pragma begin_instrument 1
+      asm volatile("#TOOL_PASS_BEGIN 1");
       while (comp[n] != comp[comp[n]]) {
         comp[n] = comp[comp[n]];
       }
-      #pragma end_instrument 1
+      asm volatile("#TOOL_PASS_END 1");
     }
   }
   cout << "Shiloach-Vishkin took " << num_iter << " iterations" << endl;

@@ -22,14 +22,22 @@ for i in $(seq 0 7); do
         /usr/bin/time -f "Time: %e\nMax RSS: %M\nAvg data+stack+text mem use: %K" -o time-${kernels[$i]}.txt ./${kernels[$i]}
     fi
     #wait
-    LD_CNT=$(grep "TOTAL HEAP LOAD" tool_log_file.txt | cut -c 1-19 --complement | paste -sd+ - | bc)
-    ST_CNT=$(grep "TOTAL HEAP STORES" tool_log_file.txt | cut -c 1-19 --complement | paste -sd+ - | bc)
-    L1_ACCS_CNT=$(grep "L1 READ ACCESSES" tool_log_file.txt | cut -c 1-20 --complement | paste -sd+ - | bc)
+    HLD_CNT=$(grep "TOTAL HEAP LOAD" tool_log_file.txt | cut -c 1-19 --complement | paste -sd+ - | bc)
+    HST_CNT=$(grep "TOTAL HEAP STORES" tool_log_file.txt | cut -c 1-19 --complement | paste -sd+ - | bc)
+    LD_CNT=$(grep "TOTAL LOAD" tool_log_file.txt | cut -c 1-14 --complement | paste -sd+ - | bc)
+    ST_CNT=$(grep "TOTAL STORES" tool_log_file.txt | cut -c 1-14 --complement | paste -sd+ - | bc)
     L1_MISS_CNT=$(grep "L1 READ MISSES" tool_log_file.txt | cut -c 1-20 --complement | paste -sd+ - | bc)
+    LLC_MISS_CNT=$(grep "LLC READ MISSES" tool_log_file.txt | cut -c 1-20 --complement | paste -sd+ - | bc)
+    LLC_MPKI=$(grep "LLC MPKI" tool_log_file.txt | cut -c 1-20 --complement | paste -sd+ - | bc)
+    INSN_COUNT=$(grep "INSN COUNT" tool_log_file.txt | cut -c 1-20 --complement | paste -sd+ - | bc)
     #PP_TIME=$(grep "TOTAL POSTPROCESS TIME" tool_log_file.txt | cut -c 1-24 --complement | paste -sd+ - | bc) # bc summation throwing an error because it doesn't handle scientific notation
     TIME=$(grep "Time" time-${kernels[$i]}.txt | cut -c 1-6 --complement)
     MAX_RSS=$(grep "Max RSS" time-${kernels[$i]}.txt | cut -c 1-9 --complement)
-    echo ${kernels[$i]},$LD_CNT,$ST_CNT,$L1_ACCS_CNT,$L1_MISS_CNT,$TIME,$MAX_RSS >> ../zray-gapbs-stats.csv
+    echo ${kernels[$i]},$LD_CNT,$ST_CNT,$HLD_CNT,$HST_CNT,$L1_MISS_CNT,$LLC_MISS_CNT,$LLC_MPKI,$INSN_COUNT,$TIME,$MAX_RSS >> ../zray-gapbs-stats.csv
+    chown apoduval:scailmemorywall- *
     #echo ${kernels[$i]},$LD_CNT,$ST_CNT,$TIME,$PP_TIME,$MAX_RSS >> ../zray-gapbs-stats.csv
+    #sleep 1
+    #../../aos
+    #sleep 1
 done
 cd $BASE_DIR

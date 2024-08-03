@@ -17,7 +17,7 @@ for i in $(seq 0 7); do
     done
     vim -c "%s/FUNCTION:.*\n.*-nan/-nan/g" -c "g/-nan/d" -c "%s/FUNCTION.*\n.*                   0/                   0/g" -c "g/                   0/d" -c "wq" coalesced.txt
     vim -c "%s/FUNCTION:.*\n.*                 inf/                 inf/g" -c "g/                 inf/d" -c "wq" coalesced.txt
-    sed -i '$d' coalesced.txt
+    #sed -i '$d' coalesced.txt
     export prefix_metadata=${kernels[$i]},
     #export prefix_metadata=${kernels[$i]},${functions[$i]},
     vim -c "%s/\n.*TIME ELAPSED (ns):/,/g" -c "%s/\n.*LOAD BW (MB\/s):/,/g" -c "%s/\n.*WRITE BW (MB\/s):/,/g" -c "%s/.*FUNCTION://g" -c "wq" coalesced.txt
@@ -27,3 +27,4 @@ for i in $(seq 0 7); do
 done
 cd $BASE_DIR
 python3 combine-multirun-bandwidths.py $BASE_DIR/zray-gapbs-bandwidth-stats.csv
+cat zray-gapbs-bandwidth-stats.csv | tail -n 12 >> zray-gapbs-bandwidth-stats-all.csv
